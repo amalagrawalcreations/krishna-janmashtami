@@ -1,0 +1,72 @@
+📚 SITE MAP & NAVIGATION GUIDE
+=============================
+
+HOMEPAGE (Hero Section)
+├─ Countdown Timer → Live Janmashtami countdown
+├─ CTA Button → "जय श्री कृष्ण" celebration button
+├─ Audio Player → Play Madhurashtakam
+└─ Navigation Menu → Links to all sections
+
+ABOUT SECTION
+├─ Lord Krishna info
+├─ Festival information
+└─ Spiritual teachings
+
+KRISHNA LEELAS SECTION (6 Stories)
+├─ Birth in Prison
+├─ Butter Theft
+├─ Divine Flute
+├─ Raas Leela
+├─ Govardhan Hill
+└─ Victory Over Kansa
+
+GALLERY SECTION
+├─ 8 image slots (with emoji fallbacks)
+├─ Click images for descriptions
+└─ Auto-loads from /images folder
+
+FOOTER
+├─ Logo
+├─ Footer Links
+├─ Social Media Buttons
+└─ Copyright Info
+
+🎯 INTERACTIVE ELEMENTS:
+========================
+✓ Click any nav link → smooth scroll
+✓ Click leela card → see full details
+✓ Click gallery item → see description
+✓ Click audio button → play/pause music
+✓ Click social buttons → see platform info
+✓ Countdown updates every second
+✓ Active nav link highlights on scroll
+✓ Mobile menu on small screens
+
+🌍 SECTION IDs:
+===============
+#home → Hero
+#about → About Krishna
+#leela → Krishna Leelas
+#gallery → Image Gallery
+
+These can be linked directly:
+- domain.com/#home
+- domain.com/#gallery
+- etc.
+
+🎨 RESPONSIVE BREAKPOINTS:
+==========================
+Desktop:  1200px+ (full layout)
+Tablet:   768px-1199px (adjusted)
+Mobile:   <768px (hamburger menu)
+
+📊 PAGE LOAD:
+=============
+1. HTML loads instantly
+2. CSS applies styling
+3. JavaScript initializes:
+   - Countdown timer starts
+   - Audio player loads
+   - Gallery populates
+   - Menu listeners attach
+   - Scroll animations enabled
