@@ -1,0 +1,4731 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <meta
+    name="description"
+    content="A premium devotional Krishna Janmashtami 2026 experience by Amal Agrawal AI."
+  >
+
+  <meta
+    name="theme-color"
+    content="#08040d"
+  >
+
+  <title>श्री कृष्ण — Janmashtami 2026 | Amal Agrawal AI</title>
+
+  <style>
+
+    /* =========================================================
+       ROOT
+    ========================================================= */
+
+    :root {
+      --bg: #07030b;
+      --bg-soft: #0d0712;
+      --surface: #120a18;
+      --surface-2: #181021;
+
+      --gold: #f5b942;
+      --gold-light: #ffe29a;
+      --gold-dark: #b87916;
+
+      --text: #fff7e4;
+      --text-soft: #e8d9c0;
+      --muted: #a99eaa;
+
+      --purple: #4b1f61;
+      --purple-light: #713c87;
+
+      --border: rgba(245, 185, 66, 0.20);
+      --border-strong: rgba(245, 185, 66, 0.42);
+
+      --shadow:
+        0 20px 70px rgba(0, 0, 0, 0.45);
+
+      --radius: 22px;
+
+      --nav-height: 76px;
+    }
+
+
+    /* =========================================================
+       RESET
+    ========================================================= */
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: var(--nav-height);
+    }
+
+    body {
+      min-height: 100vh;
+
+      background:
+        radial-gradient(
+          circle at 15% 10%,
+          rgba(103, 42, 133, 0.18),
+          transparent 32%
+        ),
+        radial-gradient(
+          circle at 85% 30%,
+          rgba(245, 185, 66, 0.08),
+          transparent 30%
+        ),
+        var(--bg);
+
+      color: var(--text);
+
+      font-family:
+        Inter,
+        ui-sans-serif,
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+
+      line-height: 1.6;
+
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+
+      overflow-x: hidden;
+    }
+
+    body.no-scroll {
+      overflow: hidden;
+    }
+
+    ::selection {
+      background: var(--gold);
+      color: #130a02;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+    }
+
+    button,
+    input {
+      font: inherit;
+    }
+
+    button {
+      border: 0;
+      cursor: pointer;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+
+    /* =========================================================
+       BACKGROUND DECORATION
+    ========================================================= */
+
+    .ambient-glow {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: -1;
+      overflow: hidden;
+    }
+
+    .ambient-glow::before,
+    .ambient-glow::after {
+      content: "";
+      position: absolute;
+      width: 420px;
+      height: 420px;
+      border-radius: 50%;
+      filter: blur(100px);
+      opacity: 0.12;
+    }
+
+    .ambient-glow::before {
+      background: #713c87;
+      top: 15%;
+      left: -180px;
+    }
+
+    .ambient-glow::after {
+      background: #f5b942;
+      bottom: 5%;
+      right: -180px;
+    }
+
+
+    /* =========================================================
+       NAVBAR
+    ========================================================= */
+
+    .navbar {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+
+      min-height: var(--nav-height);
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      padding:
+        12px
+        clamp(16px, 4vw, 55px);
+
+      background:
+        rgba(7, 3, 11, 0.82);
+
+      border-bottom:
+        1px solid var(--border);
+
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+
+      min-width: max-content;
+    }
+
+    .brand-symbol {
+      width: 42px;
+      height: 42px;
+
+      display: grid;
+      place-items: center;
+
+      border-radius: 14px;
+
+      background:
+        linear-gradient(
+          145deg,
+          rgba(245, 185, 66, 0.20),
+          rgba(113, 60, 135, 0.30)
+        );
+
+      border: 1px solid var(--border-strong);
+
+      font-size: 21px;
+
+      box-shadow:
+        0 0 30px rgba(245, 185, 66, 0.10);
+    }
+
+    .brand-copy {
+      display: flex;
+      flex-direction: column;
+      line-height: 1.1;
+    }
+
+    .brand-main {
+      font-family: Georgia, serif;
+      color: var(--gold-light);
+      font-size: 1.05rem;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+    }
+
+    .brand-sub {
+      margin-top: 4px;
+
+      color: var(--gold);
+      font-size: 0.61rem;
+      font-weight: 700;
+
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: clamp(14px, 2vw, 30px);
+    }
+
+    .nav-links a {
+      position: relative;
+
+      color: #c9bfca;
+
+      font-size: 0.82rem;
+      font-weight: 600;
+
+      transition:
+        color 0.25s ease,
+        transform 0.25s ease;
+    }
+
+    .nav-links a::after {
+      content: "";
+
+      position: absolute;
+      left: 50%;
+      bottom: -8px;
+
+      width: 0;
+      height: 2px;
+
+      background: var(--gold);
+
+      transform: translateX(-50%);
+
+      transition: width 0.25s ease;
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active {
+      color: var(--gold-light);
+    }
+
+    .nav-links a:hover::after,
+    .nav-links a.active::after {
+      width: 100%;
+    }
+
+    .nav-right {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .music-pill {
+      display: flex;
+      align-items: center;
+      gap: 9px;
+
+      padding: 7px 10px 7px 8px;
+
+      border-radius: 999px;
+
+      color: var(--gold-light);
+
+      background:
+        rgba(245, 185, 66, 0.08);
+
+      border:
+        1px solid var(--border);
+
+      transition:
+        background 0.25s ease,
+        border-color 0.25s ease,
+        transform 0.25s ease;
+    }
+
+    .music-pill:hover {
+      background:
+        rgba(245, 185, 66, 0.14);
+
+      border-color:
+        var(--border-strong);
+
+      transform: translateY(-1px);
+    }
+
+    .music-icon {
+      width: 31px;
+      height: 31px;
+
+      display: grid;
+      place-items: center;
+
+      border-radius: 50%;
+
+      color: #160c00;
+
+      background:
+        linear-gradient(
+          135deg,
+          var(--gold-light),
+          var(--gold)
+        );
+
+      font-size: 0.78rem;
+      font-weight: 900;
+    }
+
+    .music-label {
+      font-size: 0.70rem;
+      font-weight: 700;
+    }
+
+    .menu-toggle {
+      display: none;
+
+      width: 42px;
+      height: 42px;
+
+      border-radius: 12px;
+
+      background:
+        rgba(245, 185, 66, 0.08);
+
+      border:
+        1px solid var(--border);
+
+      color: var(--gold-light);
+
+      font-size: 1.25rem;
+    }
+
+
+    /* =========================================================
+       HERO
+    ========================================================= */
+
+    .hero {
+      position: relative;
+
+      min-height:
+        calc(100vh - var(--nav-height));
+
+      display: flex;
+      align-items: center;
+
+      overflow: hidden;
+
+      isolation: isolate;
+    }
+
+    .hero-image {
+      position: absolute;
+      inset: 0;
+
+      width: 100%;
+      height: 100%;
+
+      object-fit: cover;
+
+      z-index: -3;
+
+      opacity: 0.32;
+
+      filter:
+        saturate(0.9)
+        contrast(1.05);
+    }
+
+    .hero-image-overlay {
+      position: absolute;
+      inset: 0;
+
+      z-index: -2;
+
+      background:
+        linear-gradient(
+          90deg,
+          rgba(7, 3, 11, 0.98) 0%,
+          rgba(7, 3, 11, 0.90) 32%,
+          rgba(7, 3, 11, 0.66) 62%,
+          rgba(7, 3, 11, 0.90) 100%
+        );
+    }
+
+    .hero::after {
+      content: "";
+
+      position: absolute;
+      inset: 0;
+
+      z-index: -1;
+
+      background:
+        radial-gradient(
+          circle at 72% 45%,
+          rgba(245, 185, 66, 0.14),
+          transparent 30%
+        );
+    }
+
+    .hero-inner {
+      width: min(1220px, 100%);
+
+      margin: 0 auto;
+
+      padding:
+        90px
+        clamp(22px, 5vw, 70px);
+
+      display: grid;
+
+      grid-template-columns:
+        minmax(0, 1.12fr)
+        minmax(300px, 0.88fr);
+
+      gap: 60px;
+
+      align-items: center;
+    }
+
+    .hero-content {
+      max-width: 760px;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+
+      width: fit-content;
+
+      margin-bottom: 20px;
+
+      padding: 8px 13px;
+
+      border:
+        1px solid var(--border);
+
+      border-radius: 999px;
+
+      background:
+        rgba(245, 185, 66, 0.07);
+
+      color: var(--gold-light);
+
+      font-size: 0.74rem;
+      font-weight: 800;
+
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+    }
+
+    .eyebrow-dot {
+      width: 7px;
+      height: 7px;
+
+      border-radius: 50%;
+
+      background: var(--gold);
+
+      box-shadow:
+        0 0 15px var(--gold);
+    }
+
+    .hero-title {
+      font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+      font-size:
+        clamp(3.5rem, 8vw, 7.6rem);
+
+      line-height: 0.92;
+
+      letter-spacing: -0.055em;
+
+      color: #fff9eb;
+
+      margin-bottom: 22px;
+
+      text-wrap: balance;
+    }
+
+    .hero-title span {
+      display: block;
+
+      margin-top: 14px;
+
+      font-family:
+        "Segoe UI",
+        sans-serif;
+
+      font-size:
+        clamp(1rem, 2vw, 1.4rem);
+
+      line-height: 1.4;
+
+      letter-spacing: 0.16em;
+
+      color: var(--gold);
+
+      text-transform: uppercase;
+    }
+
+    .hero-highlight {
+      color: var(--gold-light);
+      font-weight: 700;
+    }
+
+    .hero-description {
+      max-width: 650px;
+
+      color: var(--text-soft);
+
+      font-size:
+        clamp(0.94rem, 1.4vw, 1.05rem);
+
+      line-height: 1.85;
+
+      margin-bottom: 30px;
+    }
+
+    .hero-actions {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+
+      margin-bottom: 35px;
+    }
+
+    .primary-btn,
+    .secondary-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 9px;
+
+      min-height: 48px;
+
+      padding: 0 20px;
+
+      border-radius: 999px;
+
+      font-size: 0.82rem;
+      font-weight: 800;
+
+      transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        background 0.25s ease;
+    }
+
+    .primary-btn {
+      color: #1a0e00;
+
+      background:
+        linear-gradient(
+          135deg,
+          var(--gold-light),
+          var(--gold)
+        );
+
+      box-shadow:
+        0 15px 35px rgba(245, 185, 66, 0.20);
+    }
+
+    .primary-btn:hover {
+      transform: translateY(-3px);
+
+      box-shadow:
+        0 18px 45px rgba(245, 185, 66, 0.30);
+    }
+
+    .secondary-btn {
+      color: var(--gold-light);
+
+      background:
+        rgba(255, 255, 255, 0.035);
+
+      border:
+        1px solid var(--border-strong);
+    }
+
+    .secondary-btn:hover {
+      transform: translateY(-3px);
+
+      background:
+        rgba(245, 185, 66, 0.08);
+    }
+
+
+    /* =========================================================
+       COUNTDOWN
+    ========================================================= */
+
+    .countdown-wrapper {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .countdown-caption {
+      color: var(--muted);
+
+      font-size: 0.70rem;
+      font-weight: 700;
+
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+    }
+
+    .countdown {
+      display: grid;
+
+      grid-template-columns:
+        repeat(4, minmax(70px, 95px));
+
+      gap: 10px;
+    }
+
+    .countdown-card {
+      padding: 15px 10px;
+
+      text-align: center;
+
+      border:
+        1px solid var(--border);
+
+      border-radius: 17px;
+
+      background:
+        linear-gradient(
+          145deg,
+          rgba(245, 185, 66, 0.10),
+          rgba(113, 60, 135, 0.08)
+        );
+
+      box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.04);
+    }
+
+    .countdown-value {
+      display: block;
+
+      color: var(--gold-light);
+
+      font-family:
+        "SFMono-Regular",
+        Consolas,
+        monospace;
+
+      font-size: 1.7rem;
+      font-weight: 800;
+
+      line-height: 1;
+    }
+
+    .countdown-label {
+      display: block;
+
+      margin-top: 7px;
+
+      color: var(--muted);
+
+      font-size: 0.58rem;
+      font-weight: 700;
+
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .countdown-message {
+      color: var(--gold-light);
+
+      font-size: 0.78rem;
+      font-weight: 700;
+    }
+
+
+    /* =========================================================
+       HERO VISUAL
+    ========================================================= */
+
+    .hero-visual {
+      position: relative;
+
+      min-height: 500px;
+
+      display: grid;
+      place-items: center;
+    }
+
+    .visual-ring {
+      position: absolute;
+
+      width:
+        min(430px, 75vw);
+
+      aspect-ratio: 1;
+
+      border-radius: 50%;
+
+      border:
+        1px solid rgba(245, 185, 66, 0.20);
+
+      box-shadow:
+        0 0 90px rgba(245, 185, 66, 0.08),
+        inset 0 0 70px rgba(113, 60, 135, 0.10);
+    }
+
+    .visual-ring::before {
+      content: "";
+
+      position: absolute;
+      inset: 25px;
+
+      border-radius: 50%;
+
+      border:
+        1px dashed rgba(245, 185, 66, 0.22);
+
+      animation:
+        rotateSlow 30s linear infinite;
+    }
+
+    .visual-card {
+      position: relative;
+
+      width:
+        min(330px, 67vw);
+
+      aspect-ratio: 0.77;
+
+      overflow: hidden;
+
+      border-radius: 30px;
+
+      border:
+        1px solid rgba(245, 185, 66, 0.32);
+
+      background:
+        #150b1d;
+
+      box-shadow:
+        0 35px 90px rgba(0, 0, 0, 0.65),
+        0 0 70px rgba(245, 185, 66, 0.10);
+
+      transform:
+        rotate(2deg);
+    }
+
+    .visual-card img {
+      width: 100%;
+      height: 100%;
+
+      object-fit: cover;
+
+      filter:
+        saturate(1.05)
+        contrast(1.03);
+    }
+
+    .visual-card::after {
+      content: "";
+
+      position: absolute;
+      inset: 0;
+
+      background:
+        linear-gradient(
+          to top,
+          rgba(7, 3, 11, 0.88),
+          transparent 48%
+        );
+    }
+
+    .visual-caption {
+      position: absolute;
+
+      z-index: 2;
+
+      left: 22px;
+      right: 22px;
+      bottom: 20px;
+    }
+
+    .visual-caption small {
+      color: var(--gold);
+
+      font-size: 0.64rem;
+      font-weight: 800;
+
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+    }
+
+    .visual-caption strong {
+      display: block;
+
+      margin-top: 4px;
+
+      color: white;
+
+      font-family: Georgia, serif;
+
+      font-size: 1.35rem;
+    }
+
+
+    /* =========================================================
+       GENERAL SECTIONS
+    ========================================================= */
+
+    section {
+      position: relative;
+    }
+
+    .section {
+      padding:
+        clamp(75px, 9vw, 125px)
+        clamp(18px, 5vw, 65px);
+    }
+
+    .section-dark {
+      background:
+        rgba(255, 255, 255, 0.012);
+    }
+
+    .section-inner {
+      width: min(1200px, 100%);
+      margin: 0 auto;
+    }
+
+    .section-heading {
+      max-width: 750px;
+
+      margin:
+        0 auto
+        55px;
+
+      text-align: center;
+    }
+
+    .section-kicker {
+      display: block;
+
+      margin-bottom: 11px;
+
+      color: var(--gold);
+
+      font-size: 0.70rem;
+      font-weight: 800;
+
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+    }
+
+    .section-title {
+      color: #fff6df;
+
+      font-family: Georgia, serif;
+
+      font-size:
+        clamp(2rem, 4vw, 3.5rem);
+
+      line-height: 1.1;
+
+      letter-spacing: -0.035em;
+
+      margin-bottom: 15px;
+    }
+
+    .section-description {
+      color: var(--muted);
+
+      font-size: 0.95rem;
+
+      line-height: 1.8;
+    }
+
+
+    /* =========================================================
+       ABOUT
+    ========================================================= */
+
+    .about-grid {
+      display: grid;
+
+      grid-template-columns:
+        minmax(0, 1fr)
+        minmax(300px, 0.85fr);
+
+      gap: 65px;
+
+      align-items: center;
+    }
+
+    .about-copy h3 {
+      color: var(--gold-light);
+
+      font-family: Georgia, serif;
+
+      font-size: 1.65rem;
+
+      margin-bottom: 16px;
+    }
+
+    .about-copy p {
+      color: var(--text-soft);
+
+      line-height: 1.9;
+
+      font-size: 0.95rem;
+
+      margin-bottom: 17px;
+    }
+
+    .quote-card {
+      position: relative;
+
+      padding: 36px;
+
+      border-radius: 28px;
+
+      background:
+        linear-gradient(
+          145deg,
+          rgba(113, 60, 135, 0.18),
+          rgba(245, 185, 66, 0.07)
+        );
+
+      border:
+        1px solid var(--border);
+
+      box-shadow: var(--shadow);
+    }
+
+    .quote-card::before {
+      content: "“";
+
+      position: absolute;
+
+      top: 3px;
+      left: 22px;
+
+      color: rgba(245, 185, 66, 0.22);
+
+      font-family: Georgia, serif;
+
+      font-size: 7rem;
+
+      line-height: 1;
+    }
+
+    .quote-card p {
+      position: relative;
+
+      color: #fff3d0;
+
+      font-family: Georgia, serif;
+
+      font-size: 1.3rem;
+
+      line-height: 1.65;
+
+      padding-top: 24px;
+    }
+
+    .quote-card small {
+      display: block;
+
+      margin-top: 18px;
+
+      color: var(--gold);
+
+      font-size: 0.72rem;
+      font-weight: 800;
+
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+
+
+    /* =========================================================
+       NAMES
+    ========================================================= */
+
+    .names-grid {
+      display: grid;
+
+      grid-template-columns:
+        repeat(auto-fill, minmax(190px, 1fr));
+
+      gap: 12px;
+    }
+
+    .name-card {
+      min-height: 105px;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      padding: 17px;
+
+      border-radius: 17px;
+
+      background:
+        linear-gradient(
+          145deg,
+          rgba(245, 185, 66, 0.055),
+          rgba(113, 60, 135, 0.07)
+        );
+
+      border:
+        1px solid rgba(245, 185, 66, 0.14);
+
+      transition:
+        transform 0.25s ease,
+        border-color 0.25s ease,
+        background 0.25s ease,
+        box-shadow 0.25s ease;
+    }
+
+    .name-card:hover {
+      transform: translateY(-4px);
+
+      border-color:
+        var(--border-strong);
+
+      background:
+        linear-gradient(
+          145deg,
+          rgba(245, 185, 66, 0.10),
+          rgba(113, 60, 135, 0.12)
+        );
+
+      box-shadow:
+        0 15px 35px rgba(0, 0, 0, 0.25);
+    }
+
+    .name-number {
+      color:
+        rgba(245, 185, 66, 0.55);
+
+      font-size: 0.60rem;
+      font-weight: 800;
+
+      letter-spacing: 0.12em;
+
+      margin-bottom: 5px;
+    }
+
+    .name-sanskrit {
+      color: var(--gold-light);
+
+      font-family: Georgia, serif;
+
+      font-size: 1.04rem;
+      font-weight: 700;
+    }
+
+    .name-meaning {
+      color: var(--muted);
+
+      font-size: 0.72rem;
+
+      margin-top: 3px;
+    }
+
+
+    /* =========================================================
+       LEELAS
+    ========================================================= */
+
+    .leela-grid {
+      display: grid;
+
+      grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+
+      gap: 18px;
+    }
+
+    .leela-card {
+      position: relative;
+
+      overflow: hidden;
+
+      padding: 28px;
+
+      min-height: 245px;
+
+      border-radius: 23px;
+
+      background:
+        linear-gradient(
+          145deg,
+          rgba(113, 60, 135, 0.13),
+          rgba(245, 185, 66, 0.045)
+        );
+
+      border:
+        1px solid var(--border);
+
+      transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        border-color 0.3s ease;
+    }
+
+    .leela-card::after {
+      content: "";
+
+      position: absolute;
+
+      width: 130px;
+      height: 130px;
+
+      right: -55px;
+      bottom: -55px;
+
+      border-radius: 50%;
+
+      background:
+        rgba(245, 185, 66, 0.07);
+
+      filter: blur(3px);
+    }
+
+    .leela-card:hover {
+      transform: translateY(-7px);
+
+      border-color:
+        var(--border-strong);
+
+      box-shadow:
+        0 25px 55px rgba(0, 0, 0, 0.35);
+    }
+
+    .leela-icon {
+      width: 54px;
+      height: 54px;
+
+      display: grid;
+      place-items: center;
+
+      margin-bottom: 20px;
+
+      border-radius: 16px;
+
+      background:
+        rgba(245, 185, 66, 0.09);
+
+      border:
+        1px solid var(--border);
+
+      font-size: 1.55rem;
+    }
+
+    .leela-card h3 {
+      color: var(--gold-light);
+
+      font-family: Georgia, serif;
+
+      font-size: 1.35rem;
+
+      margin-bottom: 10px;
+    }
+
+    .leela-card p {
+      color: var(--muted);
+
+      font-size: 0.86rem;
+
+      line-height: 1.75;
+    }
+
+
+    /* =========================================================
+       GALLERY
+    ========================================================= */
+
+    .gallery-grid {
+      display: grid;
+
+      grid-template-columns:
+        repeat(4, minmax(0, 1fr));
+
+      gap: 14px;
+    }
+
+    .gallery-item {
+      position: relative;
+
+      overflow: hidden;
+
+      min-height: 270px;
+
+      border-radius: 20px;
+
+      background:
+        #160c1c;
+
+      border:
+        1px solid var(--border);
+
+      cursor: pointer;
+
+      isolation: isolate;
+
+      transition:
+        transform 0.3s ease,
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+    }
+
+    .gallery-item:nth-child(1),
+    .gallery-item:nth-child(4) {
+      min-height: 350px;
+    }
+
+    .gallery-item:hover {
+      transform: translateY(-5px);
+
+      border-color:
+        var(--border-strong);
+
+      box-shadow:
+        0 25px 55px rgba(0, 0, 0, 0.38);
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+
+      min-height: inherit;
+
+      object-fit: cover;
+
+      transition:
+        transform 0.6s ease,
+        filter 0.3s ease;
+    }
+
+    .gallery-item:hover img {
+      transform: scale(1.06);
+
+      filter:
+        saturate(1.1)
+        brightness(1.03);
+    }
+
+    .gallery-overlay {
+      position: absolute;
+
+      z-index: 2;
+
+      left: 0;
+      right: 0;
+      bottom: 0;
+
+      padding: 50px 20px 18px;
+
+      background:
+        linear-gradient(
+          to top,
+          rgba(7, 3, 11, 0.95),
+          rgba(7, 3, 11, 0)
+        );
+    }
+
+    .gallery-overlay strong {
+      display: block;
+
+      color: white;
+
+      font-family: Georgia, serif;
+
+      font-size: 1.15rem;
+    }
+
+    .gallery-overlay span {
+      display: block;
+
+      margin-top: 3px;
+
+      color: #cfc2cf;
+
+      font-size: 0.72rem;
+    }
+
+    .image-fallback {
+      width: 100%;
+      height: 100%;
+
+      min-height: inherit;
+
+      display: grid;
+      place-items: center;
+
+      background:
+        radial-gradient(
+          circle,
+          rgba(245, 185, 66, 0.12),
+          transparent 65%
+        );
+
+      color: var(--gold);
+
+      font-size: 4rem;
+    }
+
+    .gallery-note {
+      margin-top: 18px;
+
+      text-align: center;
+
+      color: #817783;
+
+      font-size: 0.70rem;
+    }
+
+
+    /* =========================================================
+       AUDIO SECTION
+    ========================================================= */
+
+    .audio-section {
+      padding:
+        80px
+        clamp(18px, 5vw, 65px);
+    }
+
+    .audio-panel {
+      width: min(950px, 100%);
+
+      margin: 0 auto;
+
+      padding: clamp(25px, 5vw, 42px);
+
+      border-radius: 30px;
+
+      background:
+        linear-gradient(
+          145deg,
+          rgba(113, 60, 135, 0.16),
+          rgba(245, 185, 66, 0.055)
+        );
+
+      border:
+        1px solid var(--border-strong);
+
+      box-shadow:
+        0 30px 80px rgba(0, 0, 0, 0.40);
+    }
+
+    .audio-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      gap: 20px;
+
+      margin-bottom: 28px;
+    }
+
+    .audio-title {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .audio-cover {
+      width: 60px;
+      height: 60px;
+
+      display: grid;
+      place-items: center;
+
+      border-radius: 18px;
+
+      background:
+        linear-gradient(
+          145deg,
+          var(--gold-light),
+          var(--gold)
+        );
+
+      color: #1b0c00;
+
+      font-size: 1.55rem;
+    }
+
+    .audio-title h3 {
+      color: var(--gold-light);
+
+      font-family: Georgia, serif;
+
+      font-size: 1.35rem;
+    }
+
+    .audio-title p {
+      color: var(--muted);
+
+      font-size: 0.74rem;
+    }
+
+    .audio-status {
+      color: var(--gold);
+
+      font-size: 0.70rem;
+      font-weight: 700;
+    }
+
+    .audio-controls {
+      display: grid;
+
+      grid-template-columns:
+        auto 1fr auto;
+
+      align-items: center;
+
+      gap: 18px;
+    }
+
+    .audio-play {
+      width: 54px;
+      height: 54px;
+
+      display: grid;
+      place-items: center;
+
+      border-radius: 50%;
+
+      background:
+        linear-gradient(
+          135deg,
+          var(--gold-light),
+          var(--gold)
+        );
+
+      color: #170c00;
+
+      font-size: 1.1rem;
+      font-weight: 900;
+
+      box-shadow:
+        0 10px 25px rgba(245, 185, 66, 0.18);
+    }
+
+    .audio-progress {
+      width: 100%;
+      height: 6px;
+
+      appearance: none;
+      -webkit-appearance: none;
+
+      border-radius: 99px;
+
+      background:
+        rgba(255, 255, 255, 0.09);
+
+      outline: none;
+    }
+
+    .audio-progress::-webkit-slider-thumb {
+      appearance: none;
+      -webkit-appearance: none;
+
+      width: 15px;
+      height: 15px;
+
+      border-radius: 50%;
+
+      background: var(--gold);
+
+      box-shadow:
+        0 0 15px rgba(245, 185, 66, 0.35);
+    }
+
+    .audio-progress::-moz-range-thumb {
+      width: 15px;
+      height: 15px;
+
+      border: 0;
+      border-radius: 50%;
+
+      background: var(--gold);
+    }
+
+    .audio-time {
+      min-width: 90px;
+
+      color: var(--muted);
+
+      font-size: 0.70rem;
+
+      text-align: right;
+
+      font-variant-numeric: tabular-nums;
+    }
+
+    .volume-row {
+      display: flex;
+      align-items: center;
+      gap: 13px;
+
+      margin-top: 22px;
+
+      padding-top: 20px;
+
+      border-top:
+        1px solid rgba(245, 185, 66, 0.10);
+    }
+
+    .volume-row label {
+      color: var(--gold-light);
+
+      font-size: 0.70rem;
+      font-weight: 800;
+
+      white-space: nowrap;
+    }
+
+    .volume-slider {
+      flex: 1;
+
+      height: 5px;
+
+      appearance: none;
+      -webkit-appearance: none;
+
+      border-radius: 99px;
+
+      background:
+        rgba(255, 255, 255, 0.09);
+    }
+
+    .volume-slider::-webkit-slider-thumb {
+      appearance: none;
+      -webkit-appearance: none;
+
+      width: 14px;
+      height: 14px;
+
+      border-radius: 50%;
+
+      background: var(--gold);
+    }
+
+    .volume-slider::-moz-range-thumb {
+      width: 14px;
+      height: 14px;
+
+      border: 0;
+      border-radius: 50%;
+
+      background: var(--gold);
+    }
+
+    .volume-value {
+      min-width: 45px;
+
+      color: var(--muted);
+
+      font-size: 0.70rem;
+
+      text-align: right;
+    }
+
+    .audio-help {
+      margin-top: 15px;
+
+      color: #847987;
+
+      font-size: 0.68rem;
+
+      line-height: 1.6;
+    }
+
+
+    /* =========================================================
+       BRAND STRIP
+    ========================================================= */
+
+    .brand-strip {
+      padding:
+        24px
+        clamp(18px, 5vw, 65px);
+
+      border-top:
+        1px solid var(--border);
+
+      border-bottom:
+        1px solid var(--border);
+
+      background:
+        rgba(245, 185, 66, 0.025);
+    }
+
+    .brand-strip-inner {
+      width: min(1200px, 100%);
+
+      margin: 0 auto;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      gap: 13px;
+
+      text-align: center;
+    }
+
+    .brand-strip strong {
+      color: var(--gold-light);
+
+      font-family: Georgia, serif;
+
+      font-size: 1rem;
+    }
+
+    .brand-strip span {
+      color: var(--muted);
+
+      font-size: 0.72rem;
+    }
+
+
+    /* =========================================================
+       FOOTER
+    ========================================================= */
+
+    footer {
+      padding:
+        70px
+        clamp(18px, 5vw, 65px)
+        30px;
+
+      background:
+        #050208;
+
+      border-top:
+        1px solid var(--border);
+    }
+
+    .footer-inner {
+      width: min(1200px, 100%);
+
+      margin: 0 auto;
+    }
+
+    .footer-main {
+      display: grid;
+
+      grid-template-columns:
+        1.2fr
+        1fr
+        1fr;
+
+      gap: 50px;
+
+      padding-bottom: 45px;
+    }
+
+    .footer-brand h2 {
+      color: var(--gold-light);
+
+      font-family: Georgia, serif;
+
+      font-size: 1.6rem;
+
+      margin-bottom: 8px;
+    }
+
+    .footer-brand .creator {
+      color: var(--gold);
+
+      font-size: 0.72rem;
+      font-weight: 800;
+
+      letter-spacing: 0.10em;
+      text-transform: uppercase;
+    }
+
+    .footer-brand p {
+      max-width: 390px;
+
+      margin-top: 18px;
+
+      color: var(--muted);
+
+      font-size: 0.82rem;
+
+      line-height: 1.8;
+    }
+
+    .footer-column h3 {
+      color: #fff2d0;
+
+      font-size: 0.76rem;
+      font-weight: 800;
+
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+
+      margin-bottom: 17px;
+    }
+
+    .footer-column a {
+      display: block;
+
+      width: fit-content;
+
+      margin-bottom: 10px;
+
+      color: #938895;
+
+      font-size: 0.78rem;
+
+      transition: color 0.2s ease;
+    }
+
+    .footer-column a:hover {
+      color: var(--gold-light);
+    }
+
+    .footer-bottom {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      gap: 20px;
+
+      padding-top: 25px;
+
+      border-top:
+        1px solid rgba(255, 255, 255, 0.06);
+
+      color: #665d69;
+
+      font-size: 0.67rem;
+    }
+
+    .footer-bottom strong {
+      color: var(--gold);
+      font-weight: 700;
+    }
+
+
+    /* =========================================================
+       LIGHTBOX
+    ========================================================= */
+
+    .lightbox {
+      position: fixed;
+      inset: 0;
+
+      z-index: 3000;
+
+      display: none;
+      align-items: center;
+      justify-content: center;
+
+      padding: 25px;
+
+      background:
+        rgba(3, 1, 5, 0.94);
+
+      backdrop-filter: blur(15px);
+      -webkit-backdrop-filter: blur(15px);
+    }
+
+    .lightbox.open {
+      display: flex;
+    }
+
+    .lightbox-inner {
+      position: relative;
+
+      width: min(900px, 100%);
+
+      max-height: 92vh;
+
+      display: flex;
+      flex-direction: column;
+
+      border-radius: 24px;
+
+      overflow: hidden;
+
+      background:
+        #0e0712;
+
+      border:
+        1px solid var(--border-strong);
+
+      box-shadow:
+        0 35px 100px rgba(0, 0, 0, 0.70);
+    }
+
+    .lightbox-image {
+      width: 100%;
+      max-height: 72vh;
+
+      object-fit: contain;
+
+      background: #07030b;
+    }
+
+    .lightbox-info {
+      padding: 18px 22px;
+    }
+
+    .lightbox-info h3 {
+      color: var(--gold-light);
+
+      font-family: Georgia, serif;
+
+      font-size: 1.25rem;
+    }
+
+    .lightbox-info p {
+      margin-top: 4px;
+
+      color: var(--muted);
+
+      font-size: 0.75rem;
+    }
+
+    .lightbox-close {
+      position: absolute;
+
+      z-index: 5;
+
+      top: 13px;
+      right: 13px;
+
+      width: 38px;
+      height: 38px;
+
+      display: grid;
+      place-items: center;
+
+      border-radius: 50%;
+
+      background:
+        rgba(7, 3, 11, 0.75);
+
+      border:
+        1px solid rgba(255, 255, 255, 0.15);
+
+      color: white;
+
+      font-size: 1.2rem;
+    }
+
+
+    /* =========================================================
+       TOAST
+    ========================================================= */
+
+    .toast {
+      position: fixed;
+
+      z-index: 4000;
+
+      left: 50%;
+      bottom: 25px;
+
+      transform:
+        translate(-50%, 120px);
+
+      padding: 13px 18px;
+
+      border-radius: 999px;
+
+      color: #1b0c00;
+
+      background:
+        linear-gradient(
+          135deg,
+          var(--gold-light),
+          var(--gold)
+        );
+
+      font-size: 0.75rem;
+      font-weight: 800;
+
+      box-shadow:
+        0 15px 40px rgba(0, 0, 0, 0.45);
+
+      opacity: 0;
+
+      transition:
+        transform 0.35s ease,
+        opacity 0.35s ease;
+    }
+
+    .toast.show {
+      transform:
+        translate(-50%, 0);
+
+      opacity: 1;
+    }
+
+
+    /* =========================================================
+       ANIMATIONS
+    ========================================================= */
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(22px);
+
+      transition:
+        opacity 0.7s ease,
+        transform 0.7s ease;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @keyframes rotateSlow {
+      from {
+        transform: rotate(0deg);
+      }
+
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
+    @keyframes float {
+      0%,
+      100% {
+        transform:
+          translateY(0)
+          rotate(2deg);
+      }
+
+      50% {
+        transform:
+          translateY(-10px)
+          rotate(2deg);
+      }
+    }
+
+    .visual-card {
+      animation:
+        float 6s ease-in-out infinite;
+    }
+
+
+    /* =========================================================
+       RESPONSIVE
+    ========================================================= */
+
+    @media (max-width: 1050px) {
+
+      .nav-links {
+        gap: 13px;
+      }
+
+      .hero-inner {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-visual {
+        display: none;
+      }
+
+      .hero-content {
+        max-width: 850px;
+      }
+
+      .leela-grid {
+        grid-template-columns:
+          repeat(2, minmax(0, 1fr));
+      }
+
+      .gallery-grid {
+        grid-template-columns:
+          repeat(2, minmax(0, 1fr));
+      }
+
+      .footer-main {
+        grid-template-columns:
+          1fr 1fr;
+      }
+    }
+
+
+    @media (max-width: 800px) {
+
+      :root {
+        --nav-height: 68px;
+      }
+
+      .navbar {
+        padding:
+          10px 15px;
+      }
+
+      .menu-toggle {
+        display: grid;
+        place-items: center;
+      }
+
+      .nav-links {
+        position: fixed;
+
+        top: var(--nav-height);
+        left: 12px;
+        right: 12px;
+
+        display: none;
+
+        flex-direction: column;
+        align-items: stretch;
+
+        gap: 0;
+
+        padding: 10px;
+
+        border-radius: 18px;
+
+        background:
+          rgba(10, 5, 14, 0.97);
+
+        border:
+          1px solid var(--border-strong);
+
+        box-shadow:
+          0 25px 60px rgba(0, 0, 0, 0.55);
+
+        backdrop-filter: blur(20px);
+      }
+
+      .nav-links.open {
+        display: flex;
+      }
+
+      .nav-links a {
+        padding: 13px 15px;
+
+        border-radius: 11px;
+      }
+
+      .nav-links a:hover,
+      .nav-links a.active {
+        background:
+          rgba(245, 185, 66, 0.07);
+      }
+
+      .nav-links a::after {
+        display: none;
+      }
+
+      .music-label {
+        display: none;
+      }
+
+      .music-pill {
+        padding-right: 7px;
+      }
+
+      .hero-inner {
+        padding-top: 65px;
+        padding-bottom: 75px;
+      }
+
+      .about-grid {
+        grid-template-columns: 1fr;
+        gap: 35px;
+      }
+
+      .quote-card {
+        padding: 27px;
+      }
+
+      .names-grid {
+        grid-template-columns:
+          repeat(2, minmax(0, 1fr));
+      }
+
+      .audio-top {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .footer-main {
+        grid-template-columns: 1fr;
+        gap: 30px;
+      }
+    }
+
+
+    @media (max-width: 560px) {
+
+      .brand-sub {
+        font-size: 0.53rem;
+      }
+
+      .brand-main {
+        font-size: 0.92rem;
+      }
+
+      .brand-symbol {
+        width: 37px;
+        height: 37px;
+
+        border-radius: 11px;
+      }
+
+      .hero-title {
+        font-size: 3.25rem;
+      }
+
+      .hero-title span {
+        font-size: 0.75rem;
+
+        letter-spacing: 0.12em;
+      }
+
+      .hero-actions {
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .primary-btn,
+      .secondary-btn {
+        width: 100%;
+      }
+
+      .countdown {
+        grid-template-columns:
+          repeat(4, minmax(0, 1fr));
+
+        gap: 6px;
+      }
+
+      .countdown-card {
+        padding:
+          13px 5px;
+      }
+
+      .countdown-value {
+        font-size: 1.25rem;
+      }
+
+      .countdown-label {
+        font-size: 0.48rem;
+      }
+
+      .leela-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .gallery-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .gallery-item,
+      .gallery-item:nth-child(1),
+      .gallery-item:nth-child(4) {
+        min-height: 330px;
+      }
+
+      .names-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 8px;
+      }
+
+      .name-card {
+        min-height: 95px;
+        padding: 13px;
+      }
+
+      .name-sanskrit {
+        font-size: 0.90rem;
+      }
+
+      .name-meaning {
+        font-size: 0.65rem;
+      }
+
+      .audio-controls {
+        grid-template-columns:
+          auto 1fr;
+      }
+
+      .audio-time {
+        grid-column: 2;
+        min-width: 0;
+        text-align: left;
+      }
+
+      .volume-row {
+        flex-wrap: wrap;
+      }
+
+      .volume-slider {
+        width: 100%;
+        flex-basis: 100%;
+        order: 3;
+      }
+
+      .volume-value {
+        margin-left: auto;
+      }
+
+      .footer-bottom {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+
+
+    @media (prefers-reduced-motion: reduce) {
+
+      html {
+        scroll-behavior: auto;
+      }
+
+      *,
+      *::before,
+      *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+      }
+    }
+
+  </style>
+</head>
+
+
+<body>
+
+  <div class="ambient-glow"></div>
+
+
+  <!-- =======================================================
+       NAVIGATION
+  ======================================================== -->
+
+  <header class="navbar">
+
+    <a
+      href="#home"
+      class="brand"
+      aria-label="Krishna Janmashtami Home"
+    >
+
+      <div class="brand-symbol">
+        🦚
+      </div>
+
+      <div class="brand-copy">
+
+        <div class="brand-main">
+          श्री कृष्ण
+        </div>
+
+        <div class="brand-sub">
+          Amal Agrawal AI
+        </div>
+
+      </div>
+
+    </a>
+
+
+    <nav
+      class="nav-links"
+      id="navLinks"
+      aria-label="Main navigation"
+    >
+
+      <a
+        href="#home"
+        class="active"
+      >
+        Home
+      </a>
+
+      <a href="#about">
+        About
+      </a>
+
+      <a href="#names">
+        108 Names
+      </a>
+
+      <a href="#leelas">
+        Leelas
+      </a>
+
+      <a href="#gallery">
+        Gallery
+      </a>
+
+      <a href="#music">
+        Music
+      </a>
+
+    </nav>
+
+
+    <div class="nav-right">
+
+      <button
+        class="music-pill"
+        id="navMusicButton"
+        type="button"
+        aria-label="Play Madhurashtakam"
+      >
+
+        <span
+          class="music-icon"
+          id="navPlayIcon"
+        >
+          ▶
+        </span>
+
+        <span
+          class="music-label"
+          id="navMusicLabel"
+        >
+          Madhurashtakam
+        </span>
+
+      </button>
+
+
+      <button
+        class="menu-toggle"
+        id="menuToggle"
+        type="button"
+        aria-label="Open menu"
+        aria-expanded="false"
+      >
+        ☰
+      </button>
+
+    </div>
+
+  </header>
+
+
+
+  <main>
+
+    <!-- =====================================================
+         HERO
+    ====================================================== -->
+
+    <section
+      id="home"
+      class="hero"
+    >
+
+      <img
+        class="hero-image"
+        id="heroImage"
+        src="./images/krishna-flute.jpg"
+        data-fallback="https://upload.wikimedia.org/wikipedia/commons/6/68/Krishna_with_flute.jpg"
+        alt="Krishna playing the divine flute"
+        loading="eager"
+      >
+
+
+      <div class="hero-image-overlay"></div>
+
+
+      <div class="hero-inner">
+
+        <div class="hero-content reveal">
+
+          <div class="eyebrow">
+
+            <span class="eyebrow-dot"></span>
+
+            Janmashtami 2026
+
+          </div>
+
+
+          <h1 class="hero-title">
+
+            Krishna
+
+            <span>
+              The Divine Celebration • 2026
+            </span>
+
+          </h1>
+
+
+          <p class="hero-description">
+
+            Celebrate the divine birth of
+            <span class="hero-highlight">
+              Shri Krishna
+            </span>
+            — the eternal source of love, wisdom,
+            devotion and dharma.
+
+            Experience the beauty of
+            Janmashtami through stories,
+            divine names, sacred music and
+            Krishna-inspired art.
+
+          </p>
+
+
+          <div class="hero-actions">
+
+            <a
+              class="primary-btn"
+              href="#about"
+            >
+              Explore Krishna
+              <span>↓</span>
+            </a>
+
+
+            <button
+              class="secondary-btn"
+              id="heroMusicButton"
+              type="button"
+            >
+              🎵 Play Madhurashtakam
+            </button>
+
+          </div>
+
+
+          <div class="countdown-wrapper">
+
+            <div class="countdown-caption">
+              Countdown to Janmashtami • 4 September 2026
+            </div>
+
+
+            <div
+              class="countdown"
+              aria-label="Countdown to Janmashtami 2026"
+            >
+
+              <div class="countdown-card">
+
+                <span
+                  class="countdown-value"
+                  id="days"
+                >
+                  00
+                </span>
+
+                <span class="countdown-label">
+                  Days
+                </span>
+
+              </div>
+
+
+              <div class="countdown-card">
+
+                <span
+                  class="countdown-value"
+                  id="hours"
+                >
+                  00
+                </span>
+
+                <span class="countdown-label">
+                  Hours
+                </span>
+
+              </div>
+
+
+              <div class="countdown-card">
+
+                <span
+                  class="countdown-value"
+                  id="minutes"
+                >
+                  00
+                </span>
+
+                <span class="countdown-label">
+                  Minutes
+                </span>
+
+              </div>
+
+
+              <div class="countdown-card">
+
+                <span
+                  class="countdown-value"
+                  id="seconds"
+                >
+                  00
+                </span>
+
+                <span class="countdown-label">
+                  Seconds
+                </span>
+
+              </div>
+
+            </div>
+
+
+            <div
+              class="countdown-message"
+              id="countdownMessage"
+            >
+              Counting down to Janmashtami 2026
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <div class="hero-visual">
+
+          <div class="visual-ring"></div>
+
+
+          <div class="visual-card">
+
+            <img
+              src="./images/krishna-baby.jpg"
+              data-fallback="https://upload.wikimedia.org/wikipedia/commons/0/07/Yesoda-krishna.jpg"
+              alt="Bal Krishna with Mother Yashoda"
+              loading="eager"
+            >
+
+
+            <div class="visual-caption">
+
+              <small>
+                Divine Childhood
+              </small>
+
+              <strong>
+                Bal Krishna
+              </strong>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         BRAND STRIP
+    ====================================================== -->
+
+    <div class="brand-strip">
+
+      <div class="brand-strip-inner">
+
+        <strong>
+          Amal Agrawal AI
+        </strong>
+
+        <span>
+          • A devotional digital experience for Krishna Janmashtami 2026
+        </span>
+
+      </div>
+
+    </div>
+
+
+
+    <!-- =====================================================
+         ABOUT
+    ====================================================== -->
+
+    <section
+      id="about"
+      class="section section-dark"
+    >
+
+      <div class="section-inner">
+
+        <div class="section-heading reveal">
+
+          <span class="section-kicker">
+            The Divine Presence
+          </span>
+
+          <h2 class="section-title">
+            About Shri Krishna
+          </h2>
+
+          <p class="section-description">
+            A timeless presence whose stories blend
+            devotion, wisdom, compassion, courage and joy.
+          </p>
+
+        </div>
+
+
+        <div class="about-grid">
+
+          <div class="about-copy reveal">
+
+            <h3>
+              The All-Attractive One
+            </h3>
+
+            <p>
+              Shri Krishna is one of the most revered
+              figures in Hindu tradition. His life and
+              teachings are remembered through the
+              stories of Mathura, Gokul, Vrindavan and
+              Kurukshetra.
+            </p>
+
+            <p>
+              From the playful childhood of Gokul to
+              the profound wisdom of the Bhagavad Gita,
+              Krishna's narrative brings together
+              devotion, responsibility, love and dharma.
+            </p>
+
+            <p>
+              Janmashtami celebrates his divine birth
+              and invites devotees to remember the
+              values associated with his life:
+              compassion, courage, wisdom and
+              unwavering devotion.
+            </p>
+
+          </div>
+
+
+          <div class="quote-card reveal">
+
+            <p>
+              Let every moment become an opportunity
+              to remember the divine,
+              serve with sincerity,
+              and walk the path of dharma.
+            </p>
+
+            <small>
+              श्री कृष्ण • Janmashtami 2026
+            </small>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         108 NAMES
+    ====================================================== -->
+
+    <section
+      id="names"
+      class="section"
+    >
+
+      <div class="section-inner">
+
+        <div class="section-heading reveal">
+
+          <span class="section-kicker">
+            Naam Smaran
+          </span>
+
+          <h2 class="section-title">
+            108 Divine Names of Krishna
+          </h2>
+
+          <p class="section-description">
+            Each name reflects a different quality,
+            relationship, attribute or divine aspect
+            associated with Krishna.
+          </p>
+
+        </div>
+
+
+        <div
+          class="names-grid"
+          id="namesGrid"
+        ></div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         LEELAS
+    ====================================================== -->
+
+    <section
+      id="leelas"
+      class="section section-dark"
+    >
+
+      <div class="section-inner">
+
+        <div class="section-heading reveal">
+
+          <span class="section-kicker">
+            Divine Stories
+          </span>
+
+          <h2 class="section-title">
+            Krishna Leelas
+          </h2>
+
+          <p class="section-description">
+            Stories from Krishna's life that continue
+            to inspire generations.
+          </p>
+
+        </div>
+
+
+        <div class="leela-grid">
+
+          <article class="leela-card reveal">
+
+            <div class="leela-icon">
+              👶
+            </div>
+
+            <h3>
+              Divine Birth
+            </h3>
+
+            <p>
+              Krishna was born to Devaki and Vasudeva
+              in Mathura under extraordinary circumstances.
+              His birth is celebrated as a triumph of
+              divine purpose over darkness.
+            </p>
+
+          </article>
+
+
+          <article class="leela-card reveal">
+
+            <div class="leela-icon">
+              🧈
+            </div>
+
+            <h3>
+              Makhan Chor
+            </h3>
+
+            <p>
+              The playful stories of young Krishna
+              stealing butter became beloved symbols
+              of his sweetness, innocence and intimate
+              relationship with the people of Gokul.
+            </p>
+
+          </article>
+
+
+          <article class="leela-card reveal">
+
+            <div class="leela-icon">
+              🪈
+            </div>
+
+            <h3>
+              Divine Flute
+            </h3>
+
+            <p>
+              Krishna's flute is one of his most
+              recognizable symbols. Its music is
+              traditionally described as enchanting
+              the beings of Vrindavan.
+            </p>
+
+          </article>
+
+
+          <article class="leela-card reveal">
+
+            <div class="leela-icon">
+              💃
+            </div>
+
+            <h3>
+              Raas Leela
+            </h3>
+
+            <p>
+              The Raas Leela represents a profound
+              devotional relationship between Krishna
+              and the gopis and is celebrated as an
+              expression of divine love.
+            </p>
+
+          </article>
+
+
+          <article class="leela-card reveal">
+
+            <div class="leela-icon">
+              ⛰️
+            </div>
+
+            <h3>
+              Govardhan Leela
+            </h3>
+
+            <p>
+              Krishna is traditionally remembered for
+              lifting Govardhan Hill to protect the
+              people of Vraja from torrential rain.
+            </p>
+
+          </article>
+
+
+          <article class="leela-card reveal">
+
+            <div class="leela-icon">
+              🏹
+            </div>
+
+            <h3>
+              Victory Over Kansa
+            </h3>
+
+            <p>
+              Krishna ultimately defeated Kansa,
+              ending his tyranny and restoring hope
+              to Mathura.
+            </p>
+
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         GALLERY
+    ====================================================== -->
+
+    <section
+      id="gallery"
+      class="section"
+    >
+
+      <div class="section-inner">
+
+        <div class="section-heading reveal">
+
+          <span class="section-kicker">
+            Divine Visuals
+          </span>
+
+          <h2 class="section-title">
+            Krishna Gallery
+          </h2>
+
+          <p class="section-description">
+            Krishna-inspired artwork and devotional
+            imagery presented in a premium gallery.
+          </p>
+
+        </div>
+
+
+        <div
+          class="gallery-grid"
+          id="galleryGrid"
+        ></div>
+
+
+        <p class="gallery-note">
+          Images use local files first. If a local image
+          is unavailable, the gallery uses a Wikimedia
+          Commons fallback source.
+        </p>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         AUDIO
+    ====================================================== -->
+
+    <section
+      id="music"
+      class="audio-section section-dark"
+    >
+
+      <div class="audio-panel reveal">
+
+        <div class="audio-top">
+
+          <div class="audio-title">
+
+            <div class="audio-cover">
+              🎵
+            </div>
+
+            <div>
+
+              <h3>
+                Madhurashtakam
+              </h3>
+
+              <p>
+                Sacred devotional listening • Shri Krishna
+              </p>
+
+            </div>
+
+          </div>
+
+
+          <div
+            class="audio-status"
+            id="audioStatus"
+          >
+            Ready to play
+          </div>
+
+        </div>
+
+
+        <audio
+          id="audioPlayer"
+          preload="metadata"
+          src="./audio/madhurashtakam.mp3"
+        ></audio>
+
+
+        <div class="audio-controls">
+
+          <button
+            class="audio-play"
+            id="audioPlayButton"
+            type="button"
+            aria-label="Play Madhurashtakam"
+          >
+            ▶
+          </button>
+
+
+          <input
+            class="audio-progress"
+            id="audioProgress"
+            type="range"
+            min="0"
+            max="100"
+            value="0"
+            step="0.1"
+            aria-label="Audio progress"
+          >
+
+
+          <div
+            class="audio-time"
+            id="audioTime"
+          >
+            00:00 / 00:00
+          </div>
+
+        </div>
+
+
+        <div class="volume-row">
+
+          <label for="volumeBoost">
+            🔊 Volume Boost
+          </label>
+
+
+          <input
+            class="volume-slider"
+            id="volumeBoost"
+            type="range"
+            min="1"
+            max="2"
+            value="1.5"
+            step="0.1"
+            aria-label="Volume boost"
+          >
+
+
+          <span
+            class="volume-value"
+            id="volumeValue"
+          >
+            1.5×
+          </span>
+
+        </div>
+
+
+        <p class="audio-help">
+          If the music does not start automatically,
+          press Play. Browsers commonly block
+          autoplay until the user interacts with the page.
+          The audio file should be located at
+          <strong>audio/madhurashtakam.mp3</strong>.
+        </p>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+
+  <!-- =======================================================
+       FOOTER
+  ======================================================== -->
+
+  <footer>
+
+    <div class="footer-inner">
+
+      <div class="footer-main">
+
+        <div class="footer-brand">
+
+          <h2>
+            श्री कृष्ण 🦚
+          </h2>
+
+          <div class="creator">
+            Amal Agrawal AI
+          </div>
+
+          <p>
+            A premium Krishna Janmashtami 2026
+            devotional web experience combining
+            traditional inspiration with modern
+            digital design.
+          </p>
+
+        </div>
+
+
+        <div class="footer-column">
+
+          <h3>
+            Explore
+          </h3>
+
+          <a href="#home">
+            Home
+          </a>
+
+          <a href="#about">
+            About Krishna
+          </a>
+
+          <a href="#names">
+            108 Divine Names
+          </a>
+
+          <a href="#leelas">
+            Krishna Leelas
+          </a>
+
+        </div>
+
+
+        <div class="footer-column">
+
+          <h3>
+            Experience
+          </h3>
+
+          <a href="#gallery">
+            Krishna Gallery
+          </a>
+
+          <a href="#music">
+            Madhurashtakam
+          </a>
+
+          <a href="#home">
+            Janmashtami 2026
+          </a>
+
+          <a href="#home">
+            Amal Agrawal AI
+          </a>
+
+        </div>
+
+      </div>
+
+
+      <div class="footer-bottom">
+
+        <div>
+          © 2026 Krishna Celebrations
+        </div>
+
+        <div>
+          Designed with devotion by
+          <strong>
+            Amal Agrawal AI
+          </strong>
+        </div>
+
+        <div>
+          🙏 जय श्री कृष्ण 🙏
+        </div>
+
+      </div>
+
+    </div>
+
+  </footer>
+
+
+
+  <!-- =======================================================
+       LIGHTBOX
+  ======================================================== -->
+
+  <div
+    class="lightbox"
+    id="lightbox"
+    role="dialog"
+    aria-modal="true"
+    aria-label="Gallery image viewer"
+  >
+
+    <div class="lightbox-inner">
+
+      <button
+        class="lightbox-close"
+        id="lightboxClose"
+        type="button"
+        aria-label="Close image"
+      >
+        ×
+      </button>
+
+
+      <img
+        class="lightbox-image"
+        id="lightboxImage"
+        src=""
+        alt=""
+      >
+
+
+      <div class="lightbox-info">
+
+        <h3 id="lightboxTitle">
+          Krishna
+        </h3>
+
+        <p id="lightboxDescription">
+          Divine Krishna artwork
+        </p>
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+
+  <!-- =======================================================
+       TOAST
+  ======================================================== -->
+
+  <div
+    class="toast"
+    id="toast"
+    role="status"
+    aria-live="polite"
+  >
+    जय श्री कृष्ण 🙏
+  </div>
+
+
+
+  <script>
+
+    "use strict";
+
+
+    /* =========================================================
+       HELPERS
+    ========================================================= */
+
+    const $ = (selector, parent = document) =>
+      parent.querySelector(selector);
+
+
+    const $$ = (selector, parent = document) =>
+      Array.from(parent.querySelectorAll(selector));
+
+
+    function escapeHTML(value) {
+
+      return String(value)
+        .replaceAll("&", "&amp;")
+        .replaceAll("<", "&lt;")
+        .replaceAll(">", "&gt;")
+        .replaceAll('"', "&quot;")
+        .replaceAll("'", "&#039;");
+
+    }
+
+
+    function formatTime(seconds) {
+
+      if (!Number.isFinite(seconds)) {
+        return "00:00";
+      }
+
+      const minutes =
+        Math.floor(seconds / 60);
+
+      const secs =
+        Math.floor(seconds % 60);
+
+      return (
+        String(minutes).padStart(2, "0") +
+        ":" +
+        String(secs).padStart(2, "0")
+      );
+
+    }
+
+
+    /* =========================================================
+       MOBILE NAVIGATION
+    ========================================================= */
+
+    const menuToggle =
+      $("#menuToggle");
+
+    const navLinks =
+      $("#navLinks");
+
+
+    menuToggle?.addEventListener(
+      "click",
+      () => {
+
+        const isOpen =
+          navLinks.classList.toggle("open");
+
+        menuToggle.setAttribute(
+          "aria-expanded",
+          String(isOpen)
+        );
+
+        menuToggle.textContent =
+          isOpen ? "×" : "☰";
+
+      }
+    );
+
+
+    $$("#navLinks a")
+      .forEach(link => {
+
+        link.addEventListener(
+          "click",
+          () => {
+
+            navLinks.classList.remove("open");
+
+            menuToggle.setAttribute(
+              "aria-expanded",
+              "false"
+            );
+
+            menuToggle.textContent =
+              "☰";
+
+          }
+        );
+
+      });
+
+
+    /* =========================================================
+       SMOOTH SCROLL
+    ========================================================= */
+
+    $$('a[href^="#"]')
+      .forEach(link => {
+
+        link.addEventListener(
+          "click",
+          event => {
+
+            const targetId =
+              link.getAttribute("href");
+
+            if (
+              !targetId ||
+              targetId === "#"
+            ) {
+              return;
+            }
+
+            const target =
+              $(targetId);
+
+            if (!target) {
+              return;
+            }
+
+            event.preventDefault();
+
+            target.scrollIntoView({
+              behavior: "smooth",
+              block: "start"
+            });
+
+          }
+        );
+
+      });
+
+
+    /* =========================================================
+       COUNTDOWN — JANMASHTAMI 2026
+       
+       Target:
+       4 September 2026, 00:00 local time.
+       
+       This is intentionally 2026, not 2027.
+    ========================================================= */
+
+    const janmashtamiTarget =
+      new Date(
+        "2026-09-04T00:00:00"
+      );
+
+
+    const daysElement =
+      $("#days");
+
+    const hoursElement =
+      $("#hours");
+
+    const minutesElement =
+      $("#minutes");
+
+    const secondsElement =
+      $("#seconds");
+
+    const countdownMessage =
+      $("#countdownMessage");
+
+
+    function updateCountdown() {
+
+      const now =
+        new Date();
+
+      const difference =
+        janmashtamiTarget.getTime() -
+        now.getTime();
+
+
+      if (difference <= 0) {
+
+        daysElement.textContent =
+          "00";
+
+        hoursElement.textContent =
+          "00";
+
+        minutesElement.textContent =
+          "00";
+
+        secondsElement.textContent =
+          "00";
+
+        countdownMessage.textContent =
+          "✨ Janmashtami 2026 has arrived • जय श्री कृष्ण 🙏";
+
+        return;
+
+      }
+
+
+      const totalSeconds =
+        Math.floor(
+          difference / 1000
+        );
+
+
+      const days =
+        Math.floor(
+          totalSeconds / 86400
+        );
+
+
+      const hours =
+        Math.floor(
+          (totalSeconds % 86400) / 3600
+        );
+
+
+      const minutes =
+        Math.floor(
+          (totalSeconds % 3600) / 60
+        );
+
+
+      const seconds =
+        totalSeconds % 60;
+
+
+      daysElement.textContent =
+        String(days).padStart(2, "0");
+
+      hoursElement.textContent =
+        String(hours).padStart(2, "0");
+
+      minutesElement.textContent =
+        String(minutes).padStart(2, "0");
+
+      secondsElement.textContent =
+        String(seconds).padStart(2, "0");
+
+    }
+
+
+    updateCountdown();
+
+    setInterval(
+      updateCountdown,
+      1000
+    );
+
+
+    /* =========================================================
+       IMAGE FALLBACK
+       
+       Local file is always attempted first.
+       If missing, fallback URL is used.
+    ========================================================= */
+
+    function setupImageFallback(image) {
+
+      if (!image) {
+        return;
+      }
+
+
+      image.addEventListener(
+        "error",
+        () => {
+
+          const fallback =
+            image.dataset.fallback;
+
+          if (
+            fallback &&
+            image.src !== fallback
+          ) {
+
+            image.src =
+              fallback;
+
+          }
+
+        },
+        {
+          once: false
+        }
+      );
+
+    }
+
+
+    $$(".hero-image, .visual-card img")
+      .forEach(setupImageFallback);
+
+
+    /* =========================================================
+       108 DIVINE NAMES
+    ========================================================= */
+
+    const krishnaNames = [
+
+      ["कृष्ण", "The All-Attractive One"],
+      ["वासुदेव", "Son of Vasudeva"],
+      ["देवकीनन्दन", "Son of Devaki"],
+      ["गोविन्द", "Protector of Cows"],
+      ["गोपाल", "Cowherd and Protector"],
+      ["मुरारि", "Slayer of Mura"],
+      ["माधव", "Consort of Lakshmi"],
+      ["जनार्दन", "Guide of Humanity"],
+      ["नारायण", "Supreme Abode"],
+      ["दामोदर", "One Bound by a Rope"],
+      ["श्याम", "The Dark-Hued One"],
+      ["मुकुन्द", "Giver of Liberation"],
+      ["मोहन", "The Enchanter"],
+      ["मुरलीधर", "Bearer of the Flute"],
+      ["वंशीधर", "Bearer of the Flute"],
+      ["राधारमण", "Beloved of Radha"],
+      ["राधाप्रिय", "Beloved of Radha"],
+      ["वृन्दावनविहारी", "One Who Plays in Vrindavan"],
+      ["गोकुलनाथ", "Lord of Gokul"],
+      ["गोकुलचन्द्र", "Moon of Gokul"],
+      ["नन्दलाल", "Beloved Son of Nanda"],
+      ["नन्दकुमार", "Son of Nanda"],
+      ["यशोदादुलाल", "Beloved of Yashoda"],
+      ["कन्हैया", "Beloved Krishna of Braj"],
+      ["कान्हा", "Affectionate Name of Krishna"],
+      ["माखनचोर", "Butter Thief"],
+      ["गोपीप्रिय", "Beloved of the Gopis"],
+      ["गोपीजनवल्लभ", "Beloved of the Gopis"],
+      ["राधावल्लभ", "Beloved of Radha"],
+      ["गिरिधारी", "Lifter of Govardhan"],
+      ["गोवर्धनधारी", "Bearer of Govardhan"],
+      ["गिरिराजधर", "Lifter of the Sacred Hill"],
+      ["कालियदमन", "Subduer of Kaliya"],
+      ["पूतनामोक्षद", "Liberator Through Putana's Story"],
+      ["कंसनिषूदन", "Destroyer of Kansa"],
+      ["मधुसूदन", "Slayer of Madhu"],
+      ["केशव", "The Beautiful-Haired One"],
+      ["माधुसूदन", "Destroyer of Madhu"],
+      ["हृषीकेश", "Lord of the Senses"],
+      ["अच्युत", "The Infallible One"],
+      ["अनन्त", "The Infinite One"],
+      ["अव्यय", "The Imperishable One"],
+      ["सनातन", "The Eternal One"],
+      ["परब्रह्म", "Supreme Reality"],
+      ["परमात्मा", "Supreme Soul"],
+      ["भगवान", "The Divine Lord"],
+      ["ईश्वर", "Supreme Lord"],
+      ["जगन्नाथ", "Lord of the Universe"],
+      ["विश्वम्भर", "Sustainer of the Universe"],
+      ["विश्वनाथ", "Lord of the Universe"],
+      ["लोकनाथ", "Lord of the Worlds"],
+      ["देवकीनन्दन", "Joy of Devaki"],
+      ["चक्रपाणि", "Bearer of the Discus"],
+      ["शार्ङ्गपाणि", "Bearer of the Sharnga Bow"],
+      ["पार्थसारथी", "Charioteer of Arjuna"],
+      ["योगेश्वर", "Lord of Yoga"],
+      ["योगीश्वर", "Lord of Yogis"],
+      ["योगिराज", "King of Yogis"],
+      ["गीतााचार्य", "Teacher of the Gita"],
+      ["गीताज्ञानदाता", "Giver of Gita Wisdom"],
+      ["धर्मसंस्थापक", "Restorer of Dharma"],
+      ["धर्मपालक", "Protector of Dharma"],
+      ["भक्तवत्सल", "Affectionate to Devotees"],
+      ["भक्तप्रिय", "Beloved of Devotees"],
+      ["दयासागर", "Ocean of Compassion"],
+      ["करुणानिधान", "Abode of Compassion"],
+      ["कृपालु", "The Merciful One"],
+      ["दीनबन्धु", "Friend of the Humble"],
+      ["शरणागतवत्सल", "Protector of Those Who Seek Refuge"],
+      ["प्रेमस्वरूप", "Embodiment of Love"],
+      ["प्रेममूर्ति", "Embodiment of Divine Love"],
+      ["आनन्द", "Blissful One"],
+      ["आनन्दघन", "Dense Cloud of Bliss"],
+      ["सच्चिदानन्द", "Being, Consciousness and Bliss"],
+      ["चिदानन्द", "Consciousness and Bliss"],
+      ["नित्य", "Eternal"],
+      ["शाश्वत", "Everlasting"],
+      ["अज", "Unborn"],
+      ["अव्यक्त", "Unmanifest"],
+      ["सर्वज्ञ", "All-Knowing"],
+      ["सर्वशक्तिमान", "All-Powerful"],
+      ["सर्वव्यापी", "All-Pervading"],
+      ["अन्तर्यामी", "Indwelling Presence"],
+      ["हृदयवासी", "Dweller in the Heart"],
+      ["जगत्पति", "Lord of the World"],
+      ["जगदीश", "Lord of the Universe"],
+      ["देवाधिदेव", "God of Gods"],
+      ["महायोगी", "Great Mystic"],
+      ["महेश्वर", "Great Lord"],
+      ["पुरुषोत्तम", "Supreme Person"],
+      ["पुरुषोत्तम", "Supreme Being"],
+      ["द्वारकाधीश", "Lord of Dwarka"],
+      ["मथुरानाथ", "Lord of Mathura"],
+      ["ब्रजेश", "Lord of Braj"],
+      ["ब्रजनाथ", "Lord of Braj"],
+      ["व्रजेश्वर", "Lord of Vraja"],
+      ["यदुनन्दन", "Joy of the Yadu Dynasty"],
+      ["यदुवीर", "Hero of the Yadus"],
+      ["यदुनाथ", "Lord of the Yadus"],
+      ["बलरामप्रिय", "Beloved of Balarama"],
+      ["सुदर्शनधारी", "Bearer of Divine Power"],
+      ["श्रीनाथ", "Lord of Shri"],
+      ["श्रीपति", "Lord of Shri"],
+      ["लक्ष्मीपति", "Consort of Lakshmi"],
+      ["कमलनयन", "Lotus-Eyed One"],
+      ["कमलापति", "Lord of Lakshmi"],
+      ["पीताम्बर", "One Wearing Yellow Garments"],
+      ["वनमाली", "Wearing a Forest Garland"],
+      ["कौस्तुभधारी", "Bearer of the Kaustubha Jewel"],
+      ["मोरमुकुटधारी", "Bearer of the Peacock Crown"],
+      ["मुरलीमनोहर", "Enchanting Flute Player"],
+      ["श्यामसुन्दर", "Beautiful Dark-Hued One"],
+      ["नटवर", "Supreme Dancer"],
+      ["नटनागर", "Master of Divine Dance"],
+      ["रासबिहारी", "Enjoyer of the Divine Raas"],
+      ["वृन्दावनचन्द्र", "Moon of Vrindavan"]
+
+    ];
+
+
+    const namesGrid =
+      $("#namesGrid");
+
+
+    function renderNames() {
+
+      namesGrid.innerHTML =
+        krishnaNames
+          .slice(0, 108)
+          .map(
+            (name, index) => {
+
+              return `
+                <button
+                  type="button"
+                  class="name-card reveal"
+                  data-name="${escapeHTML(name[0])}"
+                  data-meaning="${escapeHTML(name[1])}"
+                  aria-label="${escapeHTML(name[0])}: ${escapeHTML(name[1])}"
+                >
+
+                  <span class="name-number">
+                    ${String(index + 1).padStart(3, "0")}
+                  </span>
+
+                  <span class="name-sanskrit">
+                    ${escapeHTML(name[0])}
+                  </span>
+
+                  <span class="name-meaning">
+                    ${escapeHTML(name[1])}
+                  </span>
+
+                </button>
+              `;
+
+            }
+          )
+          .join("");
+
+
+      $$(".name-card", namesGrid)
+        .forEach(card => {
+
+          card.addEventListener(
+            "click",
+            () => {
+
+              showToast(
+                `${card.dataset.name} — ${card.dataset.meaning}`
+              );
+
+            }
+          );
+
+        });
+
+    }
+
+
+    renderNames();
+
+
+    /* =========================================================
+       GALLERY
+    ========================================================= */
+
+    const galleryItems = [
+
+      {
+        local:
+          "./images/krishna-baby.jpg",
+
+        fallback:
+          "https://upload.wikimedia.org/wikipedia/commons/0/07/Yesoda-krishna.jpg",
+
+        title:
+          "Bal Krishna",
+
+        description:
+          "Krishna as the divine child with Mother Yashoda."
+      },
+
+
+      {
+        local:
+          "./images/krishna-flute.jpg",
+
+        fallback:
+          "https://upload.wikimedia.org/wikipedia/commons/6/68/Krishna_with_flute.jpg",
+
+        title:
+          "Krishna with Flute",
+
+        description:
+          "The enchanting flute of Shri Krishna."
+      },
+
+
+      {
+        local:
+          "./images/krishna-radha.jpg",
+
+        fallback:
+          "https://upload.wikimedia.org/wikipedia/commons/8/88/Anonymous_-_Krishna_and_Radha_on_a_Terrace_-_1972.351_-_Arthur_M._Sackler_Museum.jpg",
+
+        title:
+          "Radha Krishna",
+
+        description:
+          "A traditional devotional depiction of Radha and Krishna."
+      },
+
+
+      {
+        local:
+          "./images/krishna-birth.jpg",
+
+        fallback:
+          "https://upload.wikimedia.org/wikipedia/commons/0/06/Birth_of_Krishna.jpg",
+
+        title:
+          "Birth of Krishna",
+
+        description:
+          "A traditional depiction of Krishna's divine birth."
+      },
+
+
+      {
+        local:
+          "./images/krishna-flute-2.jpg",
+
+        fallback:
+          "https://upload.wikimedia.org/wikipedia/commons/6/68/Krishna_with_flute.jpg",
+
+        title:
+          "Divine Flute",
+
+        description:
+          "Krishna and the sacred sound of the murali."
+      },
+
+
+      {
+        local:
+          "./images/krishna-radha-2.jpg",
+
+        fallback:
+          "https://upload.wikimedia.org/wikipedia/commons/8/88/Anonymous_-_Krishna_and_Radha_on_a_Terrace_-_1972.351_-_Arthur_M._Sackler_Museum.jpg",
+
+        title:
+          "Vrindavan Devotion",
+
+        description:
+          "Radha and Krishna in devotional art."
+      },
+
+
+      {
+        local:
+          "./images/krishna-divine.jpg",
+
+        fallback:
+          "https://upload.wikimedia.org/wikipedia/commons/6/68/Krishna_with_flute.jpg",
+
+        title:
+          "Shyam Sundar",
+
+        description:
+          "A devotional representation of Krishna."
+      },
+
+
+      {
+        local:
+          "./images/krishna-vrindavan.jpg",
+
+        fallback:
+          "https://upload.wikimedia.org/wikipedia/commons/6/68/Krishna_with_flute.jpg",
+
+        title:
+          "Vrindavan Krishna",
+
+        description:
+          "Krishna's timeless connection with Vrindavan."
+      }
+
+    ];
+
+
+    const galleryGrid =
+      $("#galleryGrid");
+
+
+    function createGallery() {
+
+      galleryGrid.innerHTML =
+        galleryItems
+          .map(
+            (item, index) => {
+
+              return `
+                <button
+                  type="button"
+                  class="gallery-item reveal"
+                  data-index="${index}"
+                  aria-label="Open ${escapeHTML(item.title)}"
+                >
+
+                  <img
+                    src="${escapeHTML(item.local)}"
+                    data-fallback="${escapeHTML(item.fallback)}"
+                    alt="${escapeHTML(item.title)}"
+                    loading="lazy"
+                  >
+
+                  <span class="gallery-overlay">
+
+                    <strong>
+                      ${escapeHTML(item.title)}
+                    </strong>
+
+                    <span>
+                      ${escapeHTML(item.description)}
+                    </span>
+
+                  </span>
+
+                </button>
+              `;
+
+            }
+          )
+          .join("");
+
+
+      $$(".gallery-item", galleryGrid)
+        .forEach(item => {
+
+          const image =
+            $("img", item);
+
+          setupImageFallback(image);
+
+
+          item.addEventListener(
+            "click",
+            () => {
+
+              const index =
+                Number(item.dataset.index);
+
+              openLightbox(
+                galleryItems[index]
+              );
+
+            }
+          );
+
+        });
+
+    }
+
+
+    createGallery();
+
+
+    /* =========================================================
+       LIGHTBOX
+    ========================================================= */
+
+    const lightbox =
+      $("#lightbox");
+
+    const lightboxImage =
+      $("#lightboxImage");
+
+    const lightboxTitle =
+      $("#lightboxTitle");
+
+    const lightboxDescription =
+      $("#lightboxDescription");
+
+    const lightboxClose =
+      $("#lightboxClose");
+
+
+    function openLightbox(item) {
+
+      lightboxImage.src =
+        item.local;
+
+      lightboxImage.alt =
+        item.title;
+
+      lightboxImage.onerror =
+        () => {
+
+          lightboxImage.onerror =
+            null;
+
+          lightboxImage.src =
+            item.fallback;
+
+        };
+
+
+      lightboxTitle.textContent =
+        item.title;
+
+      lightboxDescription.textContent =
+        item.description;
+
+
+      lightbox.classList.add("open");
+
+      document.body.classList.add(
+        "no-scroll"
+      );
+
+    }
+
+
+    function closeLightbox() {
+
+      lightbox.classList.remove(
+        "open"
+      );
+
+      document.body.classList.remove(
+        "no-scroll"
+      );
+
+      lightboxImage.src =
+        "";
+
+    }
+
+
+    lightboxClose?.addEventListener(
+      "click",
+      closeLightbox
+    );
+
+
+    lightbox?.addEventListener(
+      "click",
+      event => {
+
+        if (
+          event.target === lightbox
+        ) {
+
+          closeLightbox();
+
+        }
+
+      }
+    );
+
+
+    document.addEventListener(
+      "keydown",
+      event => {
+
+        if (
+          event.key === "Escape" &&
+          lightbox.classList.contains("open")
+        ) {
+
+          closeLightbox();
+
+        }
+
+      }
+    );
+
+
+    /* =========================================================
+       AUDIO PLAYER
+    ========================================================= */
+
+    const audioPlayer =
+      $("#audioPlayer");
+
+    const audioPlayButton =
+      $("#audioPlayButton");
+
+    const audioProgress =
+      $("#audioProgress");
+
+    const audioTime =
+      $("#audioTime");
+
+    const audioStatus =
+      $("#audioStatus");
+
+    const volumeBoost =
+      $("#volumeBoost");
+
+    const volumeValue =
+      $("#volumeValue");
+
+    const navMusicButton =
+      $("#navMusicButton");
+
+    const navPlayIcon =
+      $("#navPlayIcon");
+
+    const heroMusicButton =
+      $("#heroMusicButton");
+
+
+    let audioContext = null;
+
+    let audioSource = null;
+
+    let gainNode = null;
+
+
+    function setupAudioBoost() {
+
+      if (
+        !audioPlayer ||
+        audioContext
+      ) {
+
+        return;
+
+      }
+
+
+      try {
+
+        const AudioContextClass =
+          window.AudioContext ||
+          window.webkitAudioContext;
+
+
+        if (!AudioContextClass) {
+
+          console.warn(
+            "Web Audio API unavailable."
+          );
+
+          return;
+
+        }
+
+
+        audioContext =
+          new AudioContextClass();
+
+
+        audioSource =
+          audioContext.createMediaElementSource(
+            audioPlayer
+          );
+
+
+        gainNode =
+          audioContext.createGain();
+
+
+        gainNode.gain.value =
+          Number(volumeBoost.value);
+
+
+        audioSource.connect(
+          gainNode
+        );
+
+
+        gainNode.connect(
+          audioContext.destination
+        );
+
+
+        audioPlayer.volume =
+          1;
+
+      } catch (error) {
+
+        console.warn(
+          "Audio amplification unavailable:",
+          error
+        );
+
+      }
+
+    }
+
+
+    async function resumeAudioContext() {
+
+      setupAudioBoost();
+
+
+      if (
+        audioContext &&
+        audioContext.state === "suspended"
+      ) {
+
+        try {
+
+          await audioContext.resume();
+
+        } catch (error) {
+
+          console.warn(
+            "Could not resume audio context:",
+            error
+          );
+
+        }
+
+      }
+
+    }
+
+
+    async function toggleAudio() {
+
+      if (!audioPlayer) {
+        return;
+      }
+
+
+      if (audioPlayer.paused) {
+
+        audioStatus.textContent =
+          "Loading audio…";
+
+
+        try {
+
+          await resumeAudioContext();
+
+          await audioPlayer.play();
+
+        } catch (error) {
+
+          console.error(
+            "Audio playback failed:",
+            error
+          );
+
+
+          audioStatus.textContent =
+            "Press Play again to start";
+
+
+          showToast(
+            "Audio could not start. Please press Play again."
+          );
+
+        }
+
+      } else {
+
+        audioPlayer.pause();
+
+      }
+
+    }
+
+
+    audioPlayButton?.addEventListener(
+      "click",
+      toggleAudio
+    );
+
+
+    navMusicButton?.addEventListener(
+      "click",
+      toggleAudio
+    );
+
+
+    heroMusicButton?.addEventListener(
+      "click",
+      toggleAudio
+    );
+
+
+    audioPlayer?.addEventListener(
+      "playing",
+      () => {
+
+        audioPlayButton.textContent =
+          "⏸";
+
+        navPlayIcon.textContent =
+          "⏸";
+
+        audioStatus.textContent =
+          "Playing Madhurashtakam";
+
+        navMusicButton.setAttribute(
+          "aria-label",
+          "Pause Madhurashtakam"
+        );
+
+      }
+    );
+
+
+    audioPlayer?.addEventListener(
+      "pause",
+      () => {
+
+        audioPlayButton.textContent =
+          "▶";
+
+        navPlayIcon.textContent =
+          "▶";
+
+        audioStatus.textContent =
+          "Paused";
+
+        navMusicButton.setAttribute(
+          "aria-label",
+          "Play Madhurashtakam"
+        );
+
+      }
+    );
+
+
+    audioPlayer?.addEventListener(
+      "ended",
+      () => {
+
+        audioPlayButton.textContent =
+          "▶";
+
+        navPlayIcon.textContent =
+          "▶";
+
+        audioStatus.textContent =
+          "Playback complete";
+
+      }
+    );
+
+
+    audioPlayer?.addEventListener(
+      "loadedmetadata",
+      () => {
+
+        audioTime.textContent =
+          `00:00 / ${formatTime(audioPlayer.duration)}`;
+
+        audioStatus.textContent =
+          "Ready to play";
+
+      }
+    );
+
+
+    audioPlayer?.addEventListener(
+      "timeupdate",
+      () => {
+
+        if (
+          !audioPlayer.duration ||
+          !Number.isFinite(audioPlayer.duration)
+        ) {
+
+          return;
+
+        }
+
+
+        const percentage =
+          (
+            audioPlayer.currentTime /
+            audioPlayer.duration
+          ) * 100;
+
+
+        audioProgress.value =
+          percentage;
+
+
+        audioTime.textContent =
+          `${formatTime(audioPlayer.currentTime)} / ${formatTime(audioPlayer.duration)}`;
+
+      }
+    );
+
+
+    audioProgress?.addEventListener(
+      "input",
+      () => {
+
+        if (
+          !audioPlayer.duration
+        ) {
+
+          return;
+
+        }
+
+
+        audioPlayer.currentTime =
+          (
+            Number(audioProgress.value) /
+            100
+          ) *
+          audioPlayer.duration;
+
+      }
+    );
+
+
+    volumeBoost?.addEventListener(
+      "input",
+      () => {
+
+        const value =
+          Number(volumeBoost.value);
+
+
+        volumeValue.textContent =
+          `${value.toFixed(1)}×`;
+
+
+        if (gainNode) {
+
+          gainNode.gain.value =
+            value;
+
+        }
+
+      }
+    );
+
+
+    audioPlayer?.addEventListener(
+      "error",
+      () => {
+
+        audioStatus.textContent =
+          "Audio file not found";
+
+        console.error(
+          "Could not load ./audio/madhurashtakam.mp3"
+        );
+
+      }
+    );
+
+
+    /* =========================================================
+       TOAST
+    ========================================================= */
+
+    const toast =
+      $("#toast");
+
+    let toastTimer = null;
+
+
+    function showToast(message) {
+
+      if (!toast) {
+        return;
+      }
+
+
+      toast.textContent =
+        message;
+
+
+      toast.classList.add(
+        "show"
+      );
+
+
+      clearTimeout(
+        toastTimer
+      );
+
+
+      toastTimer =
+        setTimeout(
+          () => {
+
+            toast.classList.remove(
+              "show"
+            );
+
+          },
+          2600
+        );
+
+    }
+
+
+    /* =========================================================
+       SCROLL REVEAL
+    ========================================================= */
+
+    const revealElements =
+      $$(".reveal");
+
+
+    if (
+      "IntersectionObserver" in window
+    ) {
+
+      const revealObserver =
+        new IntersectionObserver(
+          entries => {
+
+            entries.forEach(
+              entry => {
+
+                if (
+                  entry.isIntersecting
+                ) {
+
+                  entry.target.classList.add(
+                    "visible"
+                  );
+
+                  revealObserver.unobserve(
+                    entry.target
+                  );
+
+                }
+
+              }
+            );
+
+          },
+          {
+            threshold: 0.10,
+            rootMargin:
+              "0px 0px -50px 0px"
+          }
+        );
+
+
+      revealElements.forEach(
+        element => {
+
+          revealObserver.observe(
+            element
+          );
+
+        }
+      );
+
+    } else {
+
+      revealElements.forEach(
+        element => {
+
+          element.classList.add(
+            "visible"
+          );
+
+        }
+      );
+
+    }
+
+
+    /* =========================================================
+       ACTIVE NAV ON SCROLL
+    ========================================================= */
+
+    const sections =
+      $$("main section[id]");
+
+    const navigationLinks =
+      $$("#navLinks a");
+
+
+    const sectionObserver =
+      new IntersectionObserver(
+        entries => {
+
+          entries.forEach(
+            entry => {
+
+              if (
+                entry.isIntersecting
+              ) {
+
+                const id =
+                  entry.target.id;
+
+
+                navigationLinks
+                  .forEach(link => {
+
+                    link.classList.toggle(
+                      "active",
+                      link.getAttribute("href") ===
+                      `#${id}`
+                    );
+
+                  });
+
+              }
+
+            }
+          );
+
+        },
+        {
+          threshold: 0.35,
+          rootMargin:
+            `-${getComputedStyle(document.documentElement)
+              .getPropertyValue("--nav-height")} 0px -35% 0px`
+        }
+      );
+
+
+    sections.forEach(
+      section => {
+
+        sectionObserver.observe(
+          section
+        );
+
+      }
+    );
+
+
+    /* =========================================================
+       HERO IMAGE PRELOAD
+    ========================================================= */
+
+    const heroImage =
+      $("#heroImage");
+
+
+    if (heroImage) {
+
+      const fallback =
+        heroImage.dataset.fallback;
+
+
+      heroImage.addEventListener(
+        "error",
+        () => {
+
+          if (
+            fallback &&
+            !heroImage.src.includes(
+              "upload.wikimedia.org"
+            )
+          ) {
+
+            heroImage.src =
+              fallback;
+
+          }
+
+        }
+      );
+
+    }
+
+
+    /* =========================================================
+       CELEBRATE BUTTON BEHAVIOR
+    ========================================================= */
+
+    $$(".primary-btn")
+      .forEach(button => {
+
+        button.addEventListener(
+          "click",
+          () => {
+
+            showToast(
+              "🙏 जय श्री कृष्ण — Welcome to the divine celebration!"
+            );
+
+          }
+        );
+
+      });
+
+
+    /* =========================================================
+       INITIAL STATE
+    ========================================================= */
+
+    document.addEventListener(
+      "DOMContentLoaded",
+      () => {
+
+        updateCountdown();
+
+        volumeValue.textContent =
+          `${Number(volumeBoost.value).toFixed(1)}×`;
+
+        console.log(
+          "🙏 Krishna Janmashtami 2026 website loaded."
+        );
+
+        console.log(
+          "🤖 Amal Agrawal AI"
+        );
+
+      }
+    );
+
+  </script>
+
+</body>
+</html>
