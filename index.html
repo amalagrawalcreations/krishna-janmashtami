@@ -2437,6 +2437,155 @@
       }
     }
 
+    /* =========================================================
+       VIDEO GALLERY SECTION
+    ========================================================= */
+
+    .video-section {
+      padding: 5rem 1.5rem;
+      background: linear-gradient(135deg, #0a0015 0%, #120025 50%, #0d001a 100%);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .video-section::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(ellipse at center, rgba(255, 165, 0, 0.04) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .video-section-header {
+      text-align: center;
+      margin-bottom: 3.5rem;
+    }
+
+    .video-section-header .section-badge {
+      display: inline-block;
+      background: linear-gradient(135deg, rgba(255, 165, 0, 0.15), rgba(255, 100, 0, 0.15));
+      border: 1px solid rgba(255, 165, 0, 0.3);
+      color: #ffa500;
+      padding: 0.4rem 1.2rem;
+      border-radius: 2rem;
+      font-size: 0.8rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+    }
+
+    .video-section-header h2 {
+      font-size: clamp(2rem, 5vw, 3rem);
+      background: linear-gradient(135deg, #ffd700, #ff8c00, #ffd700);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 0.75rem;
+      font-weight: 800;
+    }
+
+    .video-section-header p {
+      color: rgba(255, 255, 255, 0.6);
+      font-size: 1rem;
+      max-width: 500px;
+      margin: 0 auto;
+      line-height: 1.6;
+    }
+
+    .video-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(min(100%, 480px), 1fr));
+      gap: 2rem;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .video-card {
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 165, 0, 0.15);
+      border-radius: 1.25rem;
+      overflow: hidden;
+      transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
+      position: relative;
+    }
+
+    .video-card::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      border-radius: 1.25rem;
+      background: linear-gradient(135deg, rgba(255, 165, 0, 0.06), transparent);
+      opacity: 0;
+      transition: opacity 0.35s ease;
+      pointer-events: none;
+    }
+
+    .video-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 20px 50px rgba(255, 140, 0, 0.2);
+      border-color: rgba(255, 165, 0, 0.4);
+    }
+
+    .video-card:hover::before {
+      opacity: 1;
+    }
+
+    .video-embed-wrap {
+      position: relative;
+      width: 100%;
+      padding-bottom: 56.25%;
+      background: #000;
+    }
+
+    .video-embed-wrap iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: none;
+      border-radius: 0;
+    }
+
+    .video-card-info {
+      padding: 1.2rem 1.5rem 1.4rem;
+    }
+
+    .video-card-badge {
+      display: inline-block;
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: #ffa500;
+      background: rgba(255, 165, 0, 0.1);
+      border: 1px solid rgba(255, 165, 0, 0.25);
+      padding: 0.2rem 0.7rem;
+      border-radius: 1rem;
+      margin-bottom: 0.6rem;
+    }
+
+    .video-card-title {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 0.3rem;
+      line-height: 1.4;
+    }
+
+    .video-card-artist {
+      font-size: 0.85rem;
+      color: rgba(255, 255, 255, 0.5);
+    }
+
+    @media (max-width: 600px) {
+      .video-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
   </style>
 </head>
 
@@ -2506,11 +2655,17 @@
         Gallery
       </a>
 
+
       <a href="#music">
         Music
       </a>
 
+      <a href="#videos">
+        Videos
+      </a>
+
     </nav>
+
 
 
     <div class="nav-right">
@@ -3283,6 +3438,98 @@
 
     </section>
 
+
+    <!-- =======================================================
+         VIDEO GALLERY
+    ====================================================== -->
+
+    <section id="videos" class="video-section">
+
+      <div class="video-section-header reveal">
+        <div class="section-badge">🎬 Devotional Videos</div>
+        <h2>🪈 Bhajan Videos</h2>
+        <p>Watch and listen to these divine bhajans. Click play to immerse yourself in Krishna's glory.</p>
+      </div>
+
+      <div class="video-grid">
+
+        <!-- Video 1: Nand Ke Anand Bhayo -->
+        <div class="video-card reveal">
+          <div class="video-embed-wrap">
+            <iframe
+              src="https://www.youtube.com/embed/rT7JR6i0Kb8?rel=0&modestbranding=1"
+              title="नंद के आनंद भयो जय कन्हैया लाल की - Jaya Kishori Ji"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+              loading="lazy"
+            ></iframe>
+          </div>
+          <div class="video-card-info">
+            <span class="video-card-badge">🎵 Krishna Bhajan</span>
+            <div class="video-card-title">नंद के आनंद भयो जय कन्हैया लाल की</div>
+            <div class="video-card-artist">Jaya Kishori Ji</div>
+          </div>
+        </div>
+
+        <!-- Video 2: Hare Krishna Maha Mantra -->
+        <div class="video-card reveal">
+          <div class="video-embed-wrap">
+            <iframe
+              src="https://www.youtube.com/embed/kYvVqT7xL6Y?rel=0&modestbranding=1"
+              title="Hare Krishna Maha Mantra 108 Times"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+              loading="lazy"
+            ></iframe>
+          </div>
+          <div class="video-card-info">
+            <span class="video-card-badge">🙏 Maha Mantra</span>
+            <div class="video-card-title">Hare Krishna Maha Mantra</div>
+            <div class="video-card-artist">108 Repetitions • ISKCON</div>
+          </div>
+        </div>
+
+        <!-- Video 3: Madhurashtakam -->
+        <div class="video-card reveal">
+          <div class="video-embed-wrap">
+            <iframe
+              src="https://www.youtube.com/embed/b_kAhkjqeCI?rel=0&modestbranding=1"
+              title="Madhurashtakam - Jubin Nautiyal"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+              loading="lazy"
+            ></iframe>
+          </div>
+          <div class="video-card-info">
+            <span class="video-card-badge">🌸 Sanskrit Hymn</span>
+            <div class="video-card-title">Madhurashtakam</div>
+            <div class="video-card-artist">Jubin Nautiyal • T-Series Bhakti</div>
+          </div>
+        </div>
+
+        <!-- Video 4: Aarti Kunj Bihari Ki -->
+        <div class="video-card reveal">
+          <div class="video-embed-wrap">
+            <iframe
+              src="https://www.youtube.com/embed/FEMR5alT7CY?rel=0&modestbranding=1"
+              title="Aarti Kunj Bihari Ki - Anuradha Paudwal"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+              loading="lazy"
+            ></iframe>
+          </div>
+          <div class="video-card-info">
+            <span class="video-card-badge">🪔 Aarti</span>
+            <div class="video-card-title">आरती कुंज बिहारी की</div>
+            <div class="video-card-artist">Anuradha Paudwal • T-Series Bhakti</div>
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+
+
   </main>
 
 
@@ -3354,6 +3601,10 @@
 
           <a href="#music">
             Devotional Music
+          </a>
+
+          <a href="#videos">
+            Bhajan Videos
           </a>
 
           <a href="#home">
