@@ -1474,6 +1474,101 @@
       font-weight: 700;
     }
 
+    .audio-playlist {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 12px;
+      margin: 18px 0 24px 0;
+    }
+
+    .playlist-track {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 12px 16px;
+      border-radius: 16px;
+      background: rgba(255, 255, 255, 0.035);
+      border: 1px solid rgba(245, 185, 66, 0.18);
+      color: var(--text-soft);
+      cursor: pointer;
+      text-align: left;
+      transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .playlist-track:hover {
+      background: rgba(245, 185, 66, 0.09);
+      border-color: rgba(245, 185, 66, 0.40);
+      transform: translateY(-2px);
+    }
+
+    .playlist-track.active {
+      background: linear-gradient(135deg, rgba(245, 185, 66, 0.18), rgba(113, 60, 135, 0.25));
+      border-color: var(--gold);
+      box-shadow: 0 4px 22px rgba(245, 185, 66, 0.18);
+    }
+
+    .playlist-track-icon {
+      font-size: 1.35rem;
+      width: 36px;
+      height: 36px;
+      border-radius: 10px;
+      display: grid;
+      place-items: center;
+      background: rgba(245, 185, 66, 0.12);
+      flex-shrink: 0;
+      transition: all 0.25s ease;
+    }
+
+    .playlist-track.active .playlist-track-icon {
+      background: var(--gold);
+      color: #170c00;
+      transform: scale(1.05);
+    }
+
+    .playlist-track-info {
+      flex: 1;
+      min-width: 0;
+    }
+
+    .playlist-track-title {
+      font-size: 0.88rem;
+      font-weight: 700;
+      color: var(--text);
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      margin-bottom: 2px;
+    }
+
+    .playlist-track.active .playlist-track-title {
+      color: var(--gold-light);
+    }
+
+    .playlist-track-desc {
+      font-size: 0.70rem;
+      color: var(--muted);
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .playlist-track-badge {
+      font-size: 0.65rem;
+      padding: 3px 8px;
+      border-radius: 99px;
+      background: rgba(245, 185, 66, 0.12);
+      color: var(--gold-light);
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+
+    .playlist-track.active .playlist-track-badge {
+      background: var(--gold);
+      color: #170c00;
+    }
+
     .audio-controls {
       display: grid;
 
@@ -1483,6 +1578,37 @@
       align-items: center;
 
       gap: 18px;
+    }
+
+    .audio-btn-group {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .audio-nav-btn {
+      width: 40px;
+      height: 40px;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+      background: rgba(245, 185, 66, 0.10);
+      border: 1px solid rgba(245, 185, 66, 0.26);
+      color: var(--gold-light);
+      font-size: 0.95rem;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .audio-nav-btn:hover {
+      background: rgba(245, 185, 66, 0.22);
+      border-color: var(--gold);
+      transform: scale(1.08);
+      color: #fff;
+    }
+
+    .audio-nav-btn:active {
+      transform: scale(0.95);
     }
 
     .audio-play {
@@ -1503,11 +1629,24 @@
 
       color: #170c00;
 
-      font-size: 1.1rem;
+      font-size: 1.15rem;
       font-weight: 900;
+
+      cursor: pointer;
+      border: none;
 
       box-shadow:
         0 10px 25px rgba(245, 185, 66, 0.18);
+      transition: all 0.2s ease;
+    }
+
+    .audio-play:hover {
+      transform: scale(1.06);
+      box-shadow: 0 12px 30px rgba(245, 185, 66, 0.32);
+    }
+
+    .audio-play:active {
+      transform: scale(0.95);
     }
 
     .audio-progress {
@@ -2250,14 +2389,16 @@
       }
 
       .audio-controls {
-        grid-template-columns:
-          auto 1fr;
+        grid-template-columns: 1fr;
+        gap: 14px;
+      }
+
+      .audio-btn-group {
+        justify-content: center;
       }
 
       .audio-time {
-        grid-column: 2;
-        min-width: 0;
-        text-align: left;
+        text-align: center;
       }
 
       .volume-row {
@@ -2378,7 +2519,7 @@
         class="music-pill"
         id="navMusicButton"
         type="button"
-        aria-label="Play Madhurashtakam"
+        aria-label="Play Nand Ke Anand Bhayo"
       >
 
         <span
@@ -2392,7 +2533,7 @@
           class="music-label"
           id="navMusicLabel"
         >
-          Madhurashtakam
+          नंद के आनंद भयो
         </span>
 
       </button>
@@ -2495,7 +2636,7 @@
               id="heroMusicButton"
               type="button"
             >
-              🎵 Play Madhurashtakam
+              🎵 Play: नंद के आनंद भयो
             </button>
 
           </div>
@@ -2995,18 +3136,18 @@
 
           <div class="audio-title">
 
-            <div class="audio-cover">
-              🎵
+            <div class="audio-cover" id="audioCover">
+              🪈
             </div>
 
             <div>
 
-              <h3>
-                Madhurashtakam
+              <h3 id="audioSongTitle">
+                नंद के आनंद भयो जय कन्हैया लाल की
               </h3>
 
-              <p>
-                Sacred devotional listening • Shri Krishna
+              <p id="audioSongSubtitle">
+                Janmashtami Mahotsav Bhajan • Kanha Ji Ke Bhajan
               </p>
 
             </div>
@@ -3026,21 +3167,60 @@
 
         <audio
           id="audioPlayer"
-          preload="metadata"
-          src="/audio/madhurashtakam.mp3"
-        ></audio>
+          preload="auto"
+          src="audio/nand-ke-anand-bhayo.mp3"
+        >
+          <source src="audio/nand-ke-anand-bhayo.mp3" type="audio/mpeg">
+          <source src="nand-ke-anand-bhayo.mp3" type="audio/mpeg">
+          <source src="./audio/nand-ke-anand-bhayo.mp3" type="audio/mpeg">
+          <source src="audio/vidssave.com Nand Ke Anand Bhayo Jai Kanhaiya Lal Ki _ Krishna Bhajan _ Bhakti Song _ Kanha Ji Ke Bhajan 256kbps.mp3" type="audio/mpeg">
+          <source src="vidssave.com Nand Ke Anand Bhayo Jai Kanhaiya Lal Ki _ Krishna Bhajan _ Bhakti Song _ Kanha Ji Ke Bhajan 256kbps.mp3" type="audio/mpeg">
+        </audio>
+
+
+        <!-- Devotional Playlist Track Switcher -->
+        <div
+          class="audio-playlist"
+          id="audioPlaylist"
+          role="region"
+          aria-label="Devotional Bhajans Playlist"
+        ></div>
 
 
         <div class="audio-controls">
 
-          <button
-            class="audio-play"
-            id="audioPlayButton"
-            type="button"
-            aria-label="Play Madhurashtakam"
-          >
-            ▶
-          </button>
+          <div class="audio-btn-group">
+
+            <button
+              class="audio-nav-btn"
+              id="audioPrevButton"
+              type="button"
+              aria-label="Previous Track"
+              title="Previous Bhajan"
+            >
+              ⏮
+            </button>
+
+            <button
+              class="audio-play"
+              id="audioPlayButton"
+              type="button"
+              aria-label="Play song"
+            >
+              ▶
+            </button>
+
+            <button
+              class="audio-nav-btn"
+              id="audioNextButton"
+              type="button"
+              aria-label="Next Track"
+              title="Next Bhajan"
+            >
+              ⏭
+            </button>
+
+          </div>
 
 
           <input
@@ -3068,7 +3248,7 @@
         <div class="volume-row">
 
           <label for="volumeBoost">
-            🔊 Volume Boost
+            🔊 Volume
           </label>
 
 
@@ -3076,11 +3256,11 @@
             class="volume-slider"
             id="volumeBoost"
             type="range"
-            min="1"
-            max="2"
-            value="1.5"
-            step="0.1"
-            aria-label="Volume boost"
+            min="0"
+            max="1"
+            value="1"
+            step="0.05"
+            aria-label="Volume control"
           >
 
 
@@ -3088,18 +3268,15 @@
             class="volume-value"
             id="volumeValue"
           >
-            1.5×
+            100%
           </span>
 
         </div>
 
 
         <p class="audio-help">
-          If the music does not start automatically,
-          press Play. Browsers commonly block
-          autoplay until the user interacts with the page.
-          The audio file should be located at
-          <strong>audio/madhurashtakam.mp3</strong>.
+          ✨ Press Play to start listening. Select any bhajan from the devotional playlist above to switch tracks.
+          Audio loads smoothly from the local <strong>audio/</strong> directory.
         </p>
 
       </div>
@@ -3176,7 +3353,7 @@
           </a>
 
           <a href="#music">
-            Madhurashtakam
+            Devotional Music
           </a>
 
           <a href="#home">
@@ -4099,6 +4276,12 @@
     const audioPlayButton =
       $("#audioPlayButton");
 
+    const audioPrevButton =
+      $("#audioPrevButton");
+
+    const audioNextButton =
+      $("#audioNextButton");
+
     const audioProgress =
       $("#audioProgress");
 
@@ -4107,6 +4290,18 @@
 
     const audioStatus =
       $("#audioStatus");
+
+    const audioCover =
+      $("#audioCover");
+
+    const audioSongTitle =
+      $("#audioSongTitle");
+
+    const audioSongSubtitle =
+      $("#audioSongSubtitle");
+
+    const audioPlaylist =
+      $("#audioPlaylist");
 
     const volumeBoost =
       $("#volumeBoost");
@@ -4120,154 +4315,316 @@
     const navPlayIcon =
       $("#navPlayIcon");
 
+    const navMusicLabel =
+      $("#navMusicLabel");
+
     const heroMusicButton =
       $("#heroMusicButton");
 
 
-    let audioContext = null;
+    const devotionalTracks = [
+      {
+        id: "nand-ke-anand",
+        title: "नंद के आनंद भयो जय कन्हैया लाल की",
+        subtitle: "Janmashtami Mahotsav Bhajan • Kanha Ji Ke Bhajan",
+        shortTitle: "नंद के आनंद भयो",
+        cover: "🪈",
+        badge: "Janmashtami Special",
+        sourceIndex: 0,
+        sources: [
+          "audio/nand-ke-anand-bhayo.mp3",
+          "./audio/nand-ke-anand-bhayo.mp3",
+          "nand-ke-anand-bhayo.mp3",
+          "audio/vidssave.com Nand Ke Anand Bhayo Jai Kanhaiya Lal Ki _ Krishna Bhajan _ Bhakti Song _ Kanha Ji Ke Bhajan 256kbps.mp3",
+          "./audio/vidssave.com Nand Ke Anand Bhayo Jai Kanhaiya Lal Ki _ Krishna Bhajan _ Bhakti Song _ Kanha Ji Ke Bhajan 256kbps.mp3",
+          "vidssave.com Nand Ke Anand Bhayo Jai Kanhaiya Lal Ki _ Krishna Bhajan _ Bhakti Song _ Kanha Ji Ke Bhajan 256kbps.mp3"
+        ]
+      },
+      {
+        id: "madhurashtakam",
+        title: "मधुराष्टकम् — Adharam Madhuram",
+        subtitle: "Sacred Devotional Stotram • Vallabhacharya",
+        shortTitle: "Madhurashtakam",
+        cover: "🌸",
+        badge: "Stotram",
+        sourceIndex: 0,
+        sources: [
+          "audio/madhurashtakam.mp3",
+          "./audio/madhurashtakam.mp3",
+          "madhurashtakam.mp3"
+        ]
+      },
+      {
+        id: "hare-krishna",
+        title: "हरे कृष्ण महामंत्र — 108 Repetitions Chanting",
+        subtitle: "Hare Krishna Hare Rama • 108 Sacred Japa Rounds (22 MB Full Bhajan)",
+        shortTitle: "हरे कृष्ण महामंत्र (108)",
+        cover: "📿",
+        badge: "108 Japa • 12 Min",
+        sourceIndex: 0,
+        sources: [
+          "audio/hare-krishna-maha-mantra.mp3",
+          "./audio/hare-krishna-maha-mantra.mp3",
+          "hare-krishna-maha-mantra.mp3",
+          "audio/hare-krishna-mantra.mp3",
+          "./audio/hare-krishna-mantra.mp3",
+          "hare-krishna-mantra.mp3",
+          "audio/vidssave.com Hare Krishna Maha Mantra 108 Repititions 256kbps.mp3",
+          "./audio/vidssave.com Hare Krishna Maha Mantra 108 Repititions 256kbps.mp3",
+          "vidssave.com Hare Krishna Maha Mantra 108 Repititions 256kbps.mp3"
+        ]
+      },
+      {
+        id: "krishna-aarti",
+        title: "जन्माष्टमी आरती — आरती कुंज बिहारी की",
+        subtitle: "Aarti Kunj Bihari Ki • Anuradha Paudwal (Janmashtami Special)",
+        shortTitle: "आरती कुंज बिहारी की",
+        cover: "🪔",
+        badge: "Anuradha Paudwal",
+        sourceIndex: 0,
+        sources: [
+          "audio/aarti-kunj-bihari-ki.mp3",
+          "./audio/aarti-kunj-bihari-ki.mp3",
+          "aarti-kunj-bihari-ki.mp3",
+          "audio/krishna-aarti.mp3",
+          "./audio/krishna-aarti.mp3",
+          "krishna-aarti.mp3",
+          "audio/vidssave.com जन्माष्टमी आरती_ आरती कुंज बिहारी की, Aarti Kunj Bihari Ki, Krishna Ji Ki Aarti, ANURADHA PAUDWAL LOW.mp3",
+          "./audio/vidssave.com जन्माष्टमी आरती_ आरती कुंज बिहारी की, Aarti Kunj Bihari Ki, Krishna Ji Ki Aarti, ANURADHA PAUDWAL LOW.mp3",
+          "vidssave.com जन्माष्टमी आरती_ आरती कुंज बिहारी की, Aarti Kunj Bihari Ki, Krishna Ji Ki Aarti, ANURADHA PAUDWAL LOW.mp3"
+        ]
+      }
+    ];
 
-    let audioSource = null;
-
-    let gainNode = null;
+    let currentTrackIndex = 0;
 
 
-    function setupAudioBoost() {
+    function renderPlaylist() {
 
-      if (
-        !audioPlayer ||
-        audioContext
-      ) {
-
+      if (!audioPlaylist) {
         return;
-
       }
 
+      audioPlaylist.innerHTML = "";
 
-      try {
+      devotionalTracks.forEach((track, index) => {
 
-        const AudioContextClass =
-          window.AudioContext ||
-          window.webkitAudioContext;
+        const trackBtn =
+          document.createElement("button");
 
+        trackBtn.type =
+          "button";
 
-        if (!AudioContextClass) {
+        trackBtn.className =
+          `playlist-track ${index === currentTrackIndex ? "active" : ""}`;
 
-          console.warn(
-            "Web Audio API unavailable."
-          );
-
-          return;
-
-        }
-
-
-        audioContext =
-          new AudioContextClass();
-
-
-        audioSource =
-          audioContext.createMediaElementSource(
-            audioPlayer
-          );
-
-
-        gainNode =
-          audioContext.createGain();
-
-
-        gainNode.gain.value =
-          Number(volumeBoost.value);
-
-
-        audioSource.connect(
-          gainNode
+        trackBtn.setAttribute(
+          "aria-label",
+          `Play ${track.title}`
         );
 
+        trackBtn.innerHTML = `
+          <div class="playlist-track-icon">${track.cover}</div>
+          <div class="playlist-track-info">
+            <div class="playlist-track-title">${track.title}</div>
+            <div class="playlist-track-desc">${track.subtitle}</div>
+          </div>
+          <span class="playlist-track-badge">${track.badge}</span>
+        `;
 
-        gainNode.connect(
-          audioContext.destination
+        trackBtn.addEventListener(
+          "click",
+          () => {
+
+            if (currentTrackIndex === index && !audioPlayer.paused) {
+
+              toggleAudio();
+
+            } else {
+
+              loadTrack(index, true);
+
+            }
+
+          }
         );
 
+        audioPlaylist.appendChild(trackBtn);
 
-        audioPlayer.volume =
-          1;
-
-      } catch (error) {
-
-        console.warn(
-          "Audio amplification unavailable:",
-          error
-        );
-
-      }
+      });
 
     }
 
 
-    async function resumeAudioContext() {
+    function updateActivePlaylistItem() {
 
-      setupAudioBoost();
+      if (!audioPlaylist) {
+        return;
+      }
 
+      const items =
+        audioPlaylist.querySelectorAll(".playlist-track");
+
+      items.forEach((item, index) => {
+
+        item.classList.toggle(
+          "active",
+          index === currentTrackIndex
+        );
+
+      });
+
+    }
+
+
+    function loadTrack(index, autoPlay = false) {
 
       if (
-        audioContext &&
-        audioContext.state === "suspended"
+        index < 0 ||
+        index >= devotionalTracks.length
       ) {
-
-        try {
-
-          await audioContext.resume();
-
-        } catch (error) {
-
-          console.warn(
-            "Could not resume audio context:",
-            error
-          );
-
-        }
-
+        return;
       }
 
-    }
+      currentTrackIndex =
+        index;
 
+      const track =
+        devotionalTracks[currentTrackIndex];
 
-    async function toggleAudio() {
+      track.sourceIndex = 0;
 
       if (!audioPlayer) {
         return;
       }
 
+      const nextSrc =
+        track.sources[0];
+
+      if (
+        !audioPlayer.src ||
+        (!audioPlayer.src.endsWith(nextSrc) && !audioPlayer.src.includes(encodeURI(nextSrc)))
+      ) {
+
+        audioPlayer.src =
+          nextSrc;
+
+      }
+
+      if (audioCover) {
+        audioCover.textContent = track.cover;
+      }
+
+      if (audioSongTitle) {
+        audioSongTitle.textContent = track.title;
+      }
+
+      if (audioSongSubtitle) {
+        audioSongSubtitle.textContent = track.subtitle;
+      }
+
+      if (navMusicLabel) {
+        navMusicLabel.textContent = track.shortTitle;
+      }
+
+      if (navMusicButton) {
+        navMusicButton.setAttribute(
+          "aria-label",
+          `Play ${track.shortTitle}`
+        );
+      }
+
+      if (heroMusicButton) {
+        heroMusicButton.textContent =
+          `🎵 Play: ${track.shortTitle}`;
+      }
+
+      if (audioStatus) {
+        audioStatus.textContent =
+          "Ready to play";
+      }
+
+      if (audioProgress) {
+        audioProgress.value = 0;
+      }
+
+      if (audioTime) {
+        audioTime.textContent =
+          "00:00 / 00:00";
+      }
+
+      updateActivePlaylistItem();
+
+      if (autoPlay) {
+
+        playAudio();
+
+      }
+
+    }
+
+
+    function playAudio() {
+
+      if (!audioPlayer) {
+        return;
+      }
+
+      const track =
+        devotionalTracks[currentTrackIndex];
+
+      audioStatus.textContent =
+        `Loading ${track.shortTitle}…`;
+
+      audioPlayer.muted = false;
+
+      if (volumeBoost) {
+        audioPlayer.volume =
+          Number(volumeBoost.value || 1);
+      }
+
+      const playPromise =
+        audioPlayer.play();
+
+      if (playPromise !== undefined) {
+
+        playPromise
+          .then(() => {
+
+            audioStatus.textContent =
+              `Playing ${track.shortTitle}`;
+
+          })
+          .catch(error => {
+
+            if (error && error.name === "AbortError") {
+              return;
+            }
+
+            console.warn(
+              "Playback interaction note:",
+              error
+            );
+
+            audioStatus.textContent =
+              "Click Play to listen 🎵";
+
+          });
+
+      }
+
+    }
+
+
+    function toggleAudio() {
+
+      if (!audioPlayer) {
+        return;
+      }
 
       if (audioPlayer.paused) {
 
-        audioStatus.textContent =
-          "Loading audio…";
-
-
-        try {
-
-          await resumeAudioContext();
-
-          await audioPlayer.play();
-
-        } catch (error) {
-
-          console.error(
-            "Audio playback failed:",
-            error
-          );
-
-
-          audioStatus.textContent =
-            "Press Play again to start";
-
-
-          showToast(
-            "Audio could not start. Please press Play again."
-          );
-
-        }
+        playAudio();
 
       } else {
 
@@ -4296,23 +4653,64 @@
     );
 
 
+    audioPrevButton?.addEventListener(
+      "click",
+      () => {
+
+        const prevIndex =
+          (currentTrackIndex - 1 + devotionalTracks.length) % devotionalTracks.length;
+
+        loadTrack(prevIndex, !audioPlayer.paused);
+
+      }
+    );
+
+
+    audioNextButton?.addEventListener(
+      "click",
+      () => {
+
+        const nextIndex =
+          (currentTrackIndex + 1) % devotionalTracks.length;
+
+        loadTrack(nextIndex, !audioPlayer.paused);
+
+      }
+    );
+
+
     audioPlayer?.addEventListener(
       "playing",
       () => {
 
-        audioPlayButton.textContent =
-          "⏸";
+        const track =
+          devotionalTracks[currentTrackIndex];
 
-        navPlayIcon.textContent =
-          "⏸";
+        if (audioPlayButton) {
+          audioPlayButton.textContent = "⏸";
+          audioPlayButton.setAttribute("aria-label", "Pause song");
+        }
 
-        audioStatus.textContent =
-          "Playing Madhurashtakam";
+        if (navPlayIcon) {
+          navPlayIcon.textContent = "⏸";
+        }
 
-        navMusicButton.setAttribute(
-          "aria-label",
-          "Pause Madhurashtakam"
-        );
+        if (heroMusicButton) {
+          heroMusicButton.textContent =
+            `⏸ Pause: ${track.shortTitle}`;
+        }
+
+        if (audioStatus) {
+          audioStatus.textContent =
+            `Playing ${track.shortTitle}`;
+        }
+
+        if (navMusicButton) {
+          navMusicButton.setAttribute(
+            "aria-label",
+            `Pause ${track.shortTitle}`
+          );
+        }
 
       }
     );
@@ -4322,19 +4720,34 @@
       "pause",
       () => {
 
-        audioPlayButton.textContent =
-          "▶";
+        const track =
+          devotionalTracks[currentTrackIndex];
 
-        navPlayIcon.textContent =
-          "▶";
+        if (audioPlayButton) {
+          audioPlayButton.textContent = "▶";
+          audioPlayButton.setAttribute("aria-label", "Play song");
+        }
 
-        audioStatus.textContent =
-          "Paused";
+        if (navPlayIcon) {
+          navPlayIcon.textContent = "▶";
+        }
 
-        navMusicButton.setAttribute(
-          "aria-label",
-          "Play Madhurashtakam"
-        );
+        if (heroMusicButton) {
+          heroMusicButton.textContent =
+            `🎵 Play: ${track.shortTitle}`;
+        }
+
+        if (audioStatus) {
+          audioStatus.textContent =
+            "Paused";
+        }
+
+        if (navMusicButton) {
+          navMusicButton.setAttribute(
+            "aria-label",
+            `Play ${track.shortTitle}`
+          );
+        }
 
       }
     );
@@ -4344,14 +4757,17 @@
       "ended",
       () => {
 
-        audioPlayButton.textContent =
-          "▶";
+        const nextIndex =
+          (currentTrackIndex + 1) % devotionalTracks.length;
 
-        navPlayIcon.textContent =
-          "▶";
+        const nextTrack =
+          devotionalTracks[nextIndex];
 
-        audioStatus.textContent =
-          "Playback complete";
+        showToast(
+          `🎶 Up Next: ${nextTrack.shortTitle}`
+        );
+
+        loadTrack(nextIndex, true);
 
       }
     );
@@ -4434,17 +4850,12 @@
         const value =
           Number(volumeBoost.value);
 
+        if (audioPlayer) {
+          audioPlayer.volume = value;
+        }
 
         volumeValue.textContent =
-          `${value.toFixed(1)}×`;
-
-
-        if (gainNode) {
-
-          gainNode.gain.value =
-            value;
-
-        }
+          `${Math.round(value * 100)}%`;
 
       }
     );
@@ -4454,11 +4865,47 @@
       "error",
       () => {
 
+        const track =
+          devotionalTracks[currentTrackIndex];
+
+        console.warn(
+          `Audio error for ${track.shortTitle}, source #${track.sourceIndex}`
+        );
+
+        if (
+          track.sources &&
+          track.sourceIndex < track.sources.length - 1
+        ) {
+
+          track.sourceIndex++;
+
+          const nextSrc =
+            track.sources[track.sourceIndex];
+
+          console.log(
+            `Trying alternative source: ${nextSrc}`
+          );
+
+          audioPlayer.src =
+            nextSrc;
+
+          audioPlayer.load();
+
+          if (!audioPlayer.paused) {
+
+            playAudio();
+
+          }
+
+          return;
+
+        }
+
         audioStatus.textContent =
-          "Audio file not found";
+          "Audio file unavailable";
 
         console.error(
-          "Could not load ./audio/madhurashtakam.mp3"
+          `Could not load audio for ${track.title}`
         );
 
       }
@@ -4711,8 +5158,18 @@
 
         updateCountdown();
 
-        volumeValue.textContent =
-          `${Number(volumeBoost.value).toFixed(1)}×`;
+        renderPlaylist();
+
+        loadTrack(0, false);
+
+        if (audioPlayer && volumeBoost) {
+          audioPlayer.volume = Number(volumeBoost.value);
+        }
+
+        if (volumeValue && volumeBoost) {
+          volumeValue.textContent =
+            `${Math.round(Number(volumeBoost.value) * 100)}%`;
+        }
 
         console.log(
           "🙏 Krishna Janmashtami 2026 website loaded."
